@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
 }
 
-@mixin star() {
+@mixin star {
   border-color: white transparent transparent transparent;
   border-width: 4.49px 6.18px;
   border-style: solid;
@@ -28,7 +28,24 @@
   transform-origin: 50% 22.5%;
 }
 
-@mixin size($w,$h){
+@mixin size($w, $h) {
   width: $w;
   height: $h;
+}
+
+@mixin flex($ai, $jc) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-justify-content-space-between {
+  display: flex;
+  justify-content: space-between;
 }

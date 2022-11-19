@@ -1,8 +1,75 @@
-footer{
-  position: absolute;
-  bottom: 0;
+header {
+  ul {
+    display: flex;
+  }
+
+  .progress_bar {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include size(11.11111%, 48px);
+    @media (max-width:820px) {
+      height: 23px;
+    }
+    @media (max-width:414px) {
+      height: 12px;
+    }
+  }
+}
+
+footer {
   background: #0693E34D;
-  width: 100%;
   text-align: center;
   padding: 7px 0;
+  z-index: 100;
+
+  div {
+    padding: 7px 0;
+  }
+}
+
+.container {
+  min-height: calc(100vh - 48px - 45.97px);
+}
+
+// .stars{
+//   width: 100%;
+//   height: calc(100vh - 48px);
+//   position: absolute;
+//   overflow: hidden;
+// }
+.star {
+  position: absolute;
+  @include size(0px, 0px);
+  @include star;
+  animation: twinkle 2s infinite;
+}
+
+.star::before {
+  @include star_pseudo(72deg);
+}
+
+.star::after {
+  @include star_pseudo(-72deg);
+}
+
+@keyframes rocket {
+  0% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true', cover);
+  }
+
+  100% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true', cover);
+  }
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }

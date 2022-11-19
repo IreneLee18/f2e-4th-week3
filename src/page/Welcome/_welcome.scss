@@ -1,0 +1,215 @@
+.welcome_title {
+  position: relative;
+  @include flex-center;
+  height: 200px;
+
+  @media (max-width:820px) {
+    height: 180px;
+  }
+
+  @media (max-width:414px) {
+    height: 75px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .shine_l {
+    animation: shine-left 1s infinite;
+    @include size(84px, 128px);
+
+    @media (max-width:820px) {
+      @include size(42px, 64px);
+    }
+
+    @media (max-width:414px) {
+      @include size(21px, 32px);
+    }
+  }
+
+  h1 {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/Welcome.png?raw=true', 100%);
+    @include size(960px, 240px);
+
+    @media (max-width:820px) {
+      @include size(480px, 120px);
+    }
+
+    @media (max-width:414px) {
+      @include size(300px, 75px);
+    }
+  }
+
+  .shine_r {
+    animation: shine-right 1s infinite;
+    @include size(130px, 130px);
+
+    @media (max-width:820px) {
+      @include size(100px, 100px);
+    }
+
+    @media (max-width:414px) {
+      @include size(30px, 30px);
+    }
+  }
+}
+
+.welcome_content {
+  position: relative;
+  margin: 0 auto;
+  width: 1296px;
+
+  @media (max-width:820px) {
+    width: 600px;
+    @include position-center(absolute);
+  }
+
+  @media (max-width:414px) {
+    width: 330px;
+  }
+
+  &_icon {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/Tica.png?raw=true', 100%);
+    margin: 0 auto;
+    @include size(360px, 224px);
+
+    @media (max-width:820px) {
+      @include size(180px, 124px);
+
+    }
+
+    @media (max-width:414px) {
+      @include size(180px, 124px);
+
+    }
+  }
+
+  &_body {
+    background: #0693E34D;
+    border: 16px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &_txt {
+    padding: 10px 0;
+    @include flex-center;
+    flex-direction: column;
+
+    span {
+      padding: 10px 0;
+    }
+  }
+
+  &_btn {
+    text-align: center;
+    margin-top: 32px;
+
+    button {
+      padding: 22px 44px;
+    }
+  }
+}
+
+.welcome_footer {
+  position: absolute;
+  width: 100%;
+  bottom: 54px;
+  z-index: -1;
+
+  li {
+    background: #0693E34D;
+    width: 100%;
+
+    &:nth-child(1) {
+      height: 4px;
+    }
+
+    &:nth-child(2) {
+      height: 4px;
+      margin-top: 14px;
+    }
+
+    &:nth-child(3) {
+      height: 4px;
+      margin-top: 10px;
+    }
+
+    &:nth-child(4) {
+      height: 8px;
+      margin-top: 6px;
+    }
+
+    &:nth-child(5) {
+      height: 8px;
+      margin-top: 4px;
+    }
+  }
+}
+
+
+// shine_keyframes
+@keyframes shine-left {
+  0% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=1.png?raw=true', 100%)
+  }
+
+  13% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=2.png?raw=true', 100%)
+  }
+
+  25% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=3.png?raw=true', 100%)
+  }
+
+  37% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=4.png?raw=true', 100%)
+  }
+
+  49% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=5.png?raw=true', 100%)
+  }
+
+  61% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=6.png?raw=true', 100%)
+  }
+
+  73% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine2/shine2=7.png?raw=true', 100%)
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shine-right {
+  0% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=1.png?raw=true', 100%)
+  }
+
+  13% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=2.png?raw=true', 100%)
+  }
+
+  25% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=3.png?raw=true', 100%)
+  }
+
+  37% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=4.png?raw=true', 100%)
+  }
+
+  49% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=5.png?raw=true', 100%)
+  }
+
+  61% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=6.png?raw=true', 100%)
+  }
+
+  73% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/shine1/shine1=7.png?raw=true', 100%)
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
