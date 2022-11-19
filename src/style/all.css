@@ -168,6 +168,7 @@ body {
   font-family: 'Cubic 11';
   background: #181E2A;
   color: #fff;
+  min-height: 100vh;
 }
 
 ol,
@@ -208,6 +209,15 @@ button {
   border: none;
   background: transparent;
   font-size: 16px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background: #0693E34D;
+  width: 100%;
+  text-align: center;
+  padding: 7px 0;
 }
 
 .loading_page {
