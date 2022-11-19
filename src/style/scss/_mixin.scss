@@ -28,7 +28,7 @@
   transform-origin: 50% 22.5%;
 }
 
-@include size($w,$h){
+@mixin size($w,$h){
   width: $w;
   height: $h;
 }

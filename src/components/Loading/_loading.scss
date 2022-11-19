@@ -1,12 +1,18 @@
+.loading_page {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 .loading {
-  @include position-center(fixed);
-  @include size(100px,200px);
+  @include position-center(absolute);
+  @include size(100px, 200px);
   animation: rocket .3s infinite;
 }
 
 .star {
   position: absolute;
-  @include size(0px,0px);
+  @include size(0px, 0px);
   @include star;
   animation: twinkle 2s infinite;
 }

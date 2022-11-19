@@ -22,7 +22,7 @@ function Loading() {
     <>
       <div className="container loading_page">
         <div className="loading"></div>
-        <ul>
+        <ul className="stars">
           {stars.map((item) => (
             <li key={nanoid()} className="star" style={item}></li>
           ))}

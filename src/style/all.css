@@ -210,8 +210,14 @@ button {
   font-size: 16px;
 }
 
+.loading_page {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 .loading {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
