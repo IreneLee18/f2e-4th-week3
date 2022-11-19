@@ -166,7 +166,6 @@ section {
 body {
   line-height: 1;
   font-family: 'Cubic 11';
-  min-height: 100vh;
   background: #181E2A;
   color: #fff;
 }
@@ -209,5 +208,104 @@ button {
   border: none;
   background: transparent;
   font-size: 16px;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 200px;
+  -webkit-animation: rocket .3s infinite;
+          animation: rocket .3s infinite;
+}
+
+.star {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-color: white transparent transparent transparent;
+  border-width: 4.49px 6.18px;
+  border-style: solid;
+  -webkit-animation: twinkle 2s infinite;
+          animation: twinkle 2s infinite;
+}
+
+.star::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -6.18px;
+  top: -4.49px;
+  border-color: white transparent transparent transparent;
+  border-width: 4.49px 6.18px;
+  border-style: solid;
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg);
+  -webkit-transform-origin: 50% 22.5%;
+          transform-origin: 50% 22.5%;
+}
+
+.star::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -6.18px;
+  top: -4.49px;
+  border-color: white transparent transparent transparent;
+  border-width: 4.49px 6.18px;
+  border-style: solid;
+  -webkit-transform: rotate(-72deg);
+          transform: rotate(-72deg);
+  -webkit-transform-origin: 50% 22.5%;
+          transform-origin: 50% 22.5%;
+}
+
+@-webkit-keyframes rocket {
+  0% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes rocket {
+  0% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=all.css.map */
