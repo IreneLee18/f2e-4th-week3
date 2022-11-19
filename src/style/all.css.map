@@ -9,7 +9,9 @@
         "scss/_index.scss",
         "../components/Loading/_loading.scss",
         "../page/Welcome/_welcome.scss",
-        "../page/Roles/_roles.scss"
+        "../page/Roles/_roles.scss",
+        "../page/ProductBacklog/Start/_productBacklogStart.scss",
+        "../page/ProductBacklog/List/_productBacklogList.scss"
     ],
     "names": [],
     "file": "all.css"
