@@ -17,7 +17,7 @@ header {
 }
 
 footer {
-  background: #0693E34D;
+  background: darken($primary,30%);
   text-align: center;
   padding: 7px 0;
   z-index: 100;
@@ -29,6 +29,9 @@ footer {
 
 .container {
   min-height: calc(100vh - 48px - 45.97px);
+  @media (max-width:820px) {
+    min-height: calc(100vh - 48px - 20.97px);
+  }
 }
 
 // .stars{

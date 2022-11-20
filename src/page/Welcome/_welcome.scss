@@ -84,7 +84,7 @@
   }
 
   &_body {
-    background: #0693E34D;
+    background: darken($primary,30%);
     border: 16px solid rgba(255, 255, 255, 0.5);
   }
 
@@ -115,7 +115,7 @@
   z-index: -1;
 
   li {
-    background: #0693E34D;
+    background: darken($primary,30%);
     width: 100%;
 
     &:nth-child(1) {

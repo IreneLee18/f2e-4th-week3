@@ -1,0 +1,115 @@
+.tables {
+  display: flex;
+  padding-top: 48px;
+  @include size(100%, 384px);
+
+  @media (max-width:414px) {
+    display: none;
+  }
+
+  .table {
+    opacity: 0.3;
+    @include size(40%, 100%);
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/table.png?raw=true', 100%);
+  }
+}
+
+.product_backlog_body {
+  @include position-center(absolute);
+  @include flex-justify-content-space-between;
+  margin: 0 auto;
+  width: 90vw;
+
+  @media (max-width:820px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @media (max-width:414px) {
+    position: static;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+
+  .character {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true', cover);
+    position: relative;
+    @include size(360px, 480px);
+
+    @media (max-width:820px) {
+      margin-top: 24px;
+    }
+
+    @media (max-width:414px) {
+      @include size(160px, 220px);
+      background-size: 100%;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      background: $pink30;
+      border: 16px solid #FFFFFF;
+      position: absolute;
+
+      @media (max-width:414px) {
+        border-width: 8px;
+      }
+    }
+
+    &::before {
+      @include size(16px, 16px);
+      right: 0;
+      top: 16px;
+
+      @media (max-width:414px) {
+        @include size(8px, 8px);
+        right: -13px;
+        top: 12px;
+      }
+    }
+
+    &:after {
+      @include size(32px, 32px);
+      right: -86px;
+
+      @media (max-width:414px) {
+        @include size(16px, 16px);
+      }
+    }
+  }
+
+  .text {
+    background: $pink30;
+    border: 16px solid #FFFFFF;
+    padding: 48px 64px;
+    align-self: start;
+    width: 825px;
+
+    @media (max-width:820px) {
+      width: 680px;
+      align-self: center;
+    }
+
+    @media (max-width:414px) {
+      width: 360px;
+      padding: 24px 32px;
+      margin-top: 20px;
+    }
+
+    h4 {
+      padding-bottom: 8px;
+
+      @media (max-width:414px) {
+        font-size: 18px;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

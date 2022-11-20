@@ -4,6 +4,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin position-centerX($position) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 @mixin image($url, $size) {
   background-image: url($url);
