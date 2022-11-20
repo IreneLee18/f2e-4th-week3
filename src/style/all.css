@@ -1069,4 +1069,191 @@ footer div {
 .product_backlog_body .text h4:last-child {
   padding-bottom: 0;
 }
+
+.product_backlog_list {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.product_backlog_list_header {
+  padding: 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product_backlog_list_header .character {
+  width: 180px;
+  height: 152px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO_sm.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product_backlog_list_header .text {
+  width: 1044px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 82, 165, 0.3)), to(rgba(255, 82, 165, 0.3))), #181E2A;
+  background: linear-gradient(0deg, rgba(255, 82, 165, 0.3), rgba(255, 82, 165, 0.3)), #181E2A;
+  padding: 16px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.product_backlog_list_header .text h4 {
+  line-height: 2;
+}
+
+.product_backlog_list_header .jira_logo {
+  width: 160px;
+  height: 64px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/jira_logo%201.png?raw=true");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.product_backlog_list_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product_backlog_list_body .sort {
+  background: #5F5F5F;
+  padding: 16px 18px;
+  position: relative;
+}
+
+.product_backlog_list_body .sort li {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.product_backlog_list_body .sort li:last-child {
+  position: absolute;
+  bottom: 16px;
+}
+
+.product_backlog_list_body .dropbox {
+  background: #2F343F;
+  width: 50%;
+}
+
+.product_backlog_list_body .dropbox li {
+  height: 90px;
+}
+
+.product_backlog_list_body .title {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.product_backlog_list_body .title h3 {
+  margin-right: 16px;
+}
+
+.product_backlog_list_body .undone {
+  position: relative;
+}
+
+.product_backlog_list_body .undone_item {
+  position: absolute;
+  height: 90px;
+}
+
+.product_backlog_list_body .undone_item h4,
+.product_backlog_list_body .undone_item h5 {
+  white-space: nowrap;
+}
+
+.product_backlog_list_body .undone_item h5 {
+  font-size: 12px;
+}
+
+.product_backlog_list_body .undone li:nth-child(1) .undone_item {
+  top: 20px;
+  left: 80px;
+}
+
+.product_backlog_list_body .undone li:nth-child(2) .undone_item {
+  top: 130px;
+  left: 260px;
+}
+
+.product_backlog_list_body .undone li:nth-child(3) .undone_item {
+  left: 30px;
+}
+
+.product_backlog_list_body .undone li:nth-child(4) .undone_item {
+  top: 250px;
+  left: 250px;
+}
+
+.product_backlog_list_body .done {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.product_backlog_list_body .done li {
+  width: 90%;
+  margin: 8px 0;
+}
+
+.product_backlog_list_body .done_item {
+  border: 8px dashed #999999;
+  width: 100%;
+  height: 100%;
+}
+
+.product_backlog_list_body .have_item {
+  padding: 8px 16px;
+  border: 8px solid #FF52A5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 /*# sourceMappingURL=all.css.map */

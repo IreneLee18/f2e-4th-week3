@@ -1,0 +1,142 @@
+.product_backlog_list {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.product_backlog_list_header {
+  padding: 24px 0;
+  @include flex(start, space-between);
+
+  .character {
+    @include size(180px, 152px);
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO_sm.png?raw=true', cover);
+  }
+
+  .text {
+    width: 1044px;
+    background: $pink30;
+    padding: 16px 32px;
+    @include flex(center, start);
+
+    h4 {
+      line-height: 2;
+    }
+  }
+
+  .jira_logo {
+    @include size(160px, 64px);
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/jira_logo%201.png?raw=true', 100%);
+  }
+}
+
+.product_backlog_list_body {
+  display: flex;
+
+  .sort {
+    background: $gray600;
+    padding: 16px 18px;
+    position: relative;
+
+    li {
+      // 文字垂直
+      writing-mode: vertical-rl;
+      // 文字轉向 > 朝右
+      text-orientation: sideways-right;
+      // 文字翻轉(左右顛倒、上下顛倒)
+      transform: scale(-1, -1);
+
+      &:last-child {
+        position: absolute;
+        bottom: 16px;
+      }
+    }
+  }
+
+  .dropbox {
+    background: $background10;
+    width: 50%;
+
+    li {
+      height: 90px;
+    }
+  }
+
+  .title {
+    padding: 8px;
+    @include flex(center, start);
+
+    h3 {
+      margin-right: 16px;
+    }
+  }
+
+  .undone {
+    position: relative;
+
+    &_item {
+      position: absolute;
+      height: 90px;
+
+      h4,
+      h5 {
+        white-space: nowrap;
+      }
+      h5{
+        font-size: 12px;
+      }
+    }
+
+    li {
+      &:nth-child(1) {
+        .undone_item {
+          top: 20px;
+          left: 80px;
+        }
+      }
+
+      &:nth-child(2) {
+        .undone_item {
+          top: 130px;
+          left: 260px;
+        }
+      }
+
+      &:nth-child(3) {
+        .undone_item {
+          left: 30px;
+        }
+      }
+
+      &:nth-child(4) {
+        .undone_item {
+          top: 250px;
+          left: 250px;
+        }
+      }
+    }
+  }
+
+  .done {
+    @include flex-center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+
+    li {
+      width: 90%;
+      margin: 8px 0;
+    }
+
+    &_item {
+      border: 8px dashed $gray500;
+      @include size(100%, 100%);
+    }
+  }
+
+  .have_item {
+    padding: 8px 16px;
+    border: 8px solid $pink;
+    @include flex(start, center);
+    flex-direction: column;
+  }
+
+}
