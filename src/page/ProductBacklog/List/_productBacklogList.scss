@@ -7,9 +7,29 @@
   padding: 24px 0;
   @include flex(start, space-between);
 
+  @media (max-width:820px) {
+    align-items: end;
+  }
+
+  @media (max-width:414px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .character {
-    @include size(180px, 152px);
     @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO_sm.png?raw=true', cover);
+    @include size(180px, 152px);
+
+    @media (max-width:820px) {
+      @include size(110px, 150px);
+      background-size: 100%;
+      margin-bottom: 0;
+    }
+
+    @media (max-width:414px) {
+      @include size(180px, 150px);
+      background-size: cover;
+    }
   }
 
   .text {
@@ -17,6 +37,16 @@
     background: $pink30;
     padding: 16px 32px;
     @include flex(center, start);
+
+    @media (max-width:820px) {
+      width: 550px;
+      flex-direction: column;
+    }
+
+    @media (max-width:414px) {
+      width: 100%;
+      padding: 16px;
+    }
 
     h4 {
       line-height: 2;
@@ -26,16 +56,32 @@
   .jira_logo {
     @include size(160px, 64px);
     @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/jira_logo%201.png?raw=true', 100%);
+
+    @media (max-width:820px) {
+      align-self: end;
+    }
   }
 }
 
 .product_backlog_list_body {
   display: flex;
 
+  @media (max-width:820px) {
+    flex-wrap: wrap;
+  }
+
   .sort {
     background: $gray600;
     padding: 16px 18px;
     position: relative;
+
+    @media (max-width:820px) {
+      width: 8%;
+    }
+
+    @media (max-width:414px) {
+      width: 18%;
+    }
 
     li {
       // 文字垂直
@@ -56,14 +102,46 @@
     background: $background10;
     width: 50%;
 
+    // ul {
+    //   @media (max-width:414px) {
+    //     padding: 0 8px;
+    //   }
+    // }
+
     li {
       height: 90px;
+
+      @media (max-width:414px) {
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+
+  .undone_dropbox {
+    @media (max-width:820px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .done_dropbox {
+    @media (max-width:820px) {
+      width: 92%;
+    }
+
+    @media (max-width:414px) {
+      width: 82%;
     }
   }
 
   .title {
     padding: 8px;
     @include flex(center, start);
+
+    @media (max-width:414px) {
+      flex-direction: column;
+    }
 
     h3 {
       margin-right: 16px;
@@ -72,21 +150,15 @@
 
   .undone {
     position: relative;
-
-    &_item {
-      position: absolute;
-      height: 90px;
-
-      h4,
-      h5 {
-        white-space: nowrap;
-      }
-      h5{
-        font-size: 12px;
-      }
+    @media (max-width:414px) {
+      @include flex(center,center);
+      flex-wrap: wrap;
     }
-
     li {
+      @media (max-width:414px) {
+        // 製作跟 done 的 item 一樣尺寸
+        width: 73.8%;
+      }
       &:nth-child(1) {
         .undone_item {
           top: 20px;
@@ -113,6 +185,14 @@
           left: 250px;
         }
       }
+      
+    }
+
+    .undone_active {
+      div {
+        border-color: #fff;
+        background: $pink;
+      }
     }
   }
 
@@ -124,19 +204,40 @@
     li {
       width: 90%;
       margin: 8px 0;
+      border: 8px dashed $gray500;
+
     }
 
-    &_item {
-      border: 8px dashed $gray500;
-      @include size(100%, 100%);
+    .done_active {
+      border-color: #fff;
     }
+
   }
 
   .have_item {
+    position: absolute;
+    height: 90px;
     padding: 8px 16px;
     border: 8px solid $pink;
     @include flex(start, center);
     flex-direction: column;
+
+    @media (max-width:414px) {
+      position: static;
+    }
+
+    h4,
+    h5 {
+      white-space: nowrap;
+      @media (max-width:414px) {
+        white-space: normal;
+        font-size: 18px;
+      }
+    }
+
+    h5 {
+      font-size: 12px;
+    }
   }
 
 }

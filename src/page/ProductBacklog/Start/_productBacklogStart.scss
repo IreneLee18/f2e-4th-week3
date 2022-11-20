@@ -3,13 +3,17 @@
   padding-top: 48px;
   @include size(100%, 384px);
 
+  @media (max-width:820px) {
+    @include size(100%, 85vh);
+  }
+
   @media (max-width:414px) {
     display: none;
   }
 
   .table {
     opacity: 0.3;
-    @include size(40%, 100%);
+    @include size(40%, 384px);
     @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/table.png?raw=true', 100%);
   }
 }
@@ -40,6 +44,7 @@
     @include size(360px, 480px);
 
     @media (max-width:820px) {
+      @include size(300px, 400px);
       margin-top: 24px;
     }
 
@@ -55,6 +60,10 @@
       border: 16px solid #FFFFFF;
       position: absolute;
 
+      @media (max-width:820px) {
+        border-width: 10px;
+      }
+
       @media (max-width:414px) {
         border-width: 8px;
       }
@@ -64,6 +73,12 @@
       @include size(16px, 16px);
       right: 0;
       top: 16px;
+
+      @media (max-width:820px) {
+        @include size(10px, 10px);
+        right: 4px;
+        top: 24px;
+      }
 
       @media (max-width:414px) {
         @include size(8px, 8px);
@@ -75,6 +90,11 @@
     &:after {
       @include size(32px, 32px);
       right: -86px;
+
+      @media (max-width:820px) {
+        right: -78px;
+        @include size(20px, 20px);
+      }
 
       @media (max-width:414px) {
         @include size(16px, 16px);
@@ -92,12 +112,14 @@
     @media (max-width:820px) {
       width: 680px;
       align-self: center;
+      border-width: 10px;
     }
 
     @media (max-width:414px) {
-      width: 360px;
-      padding: 24px 32px;
+      width: 330px;
+      padding: 12px 16px;
       margin-top: 20px;
+      border-width: 8px;
     }
 
     h4 {
