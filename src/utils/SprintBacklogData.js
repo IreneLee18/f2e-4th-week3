@@ -1,7 +1,7 @@
 export const footerCss = {
   position: "static",
 };
-export const progress_bar = [
+export const progress_bar_init = [
   {
     id: 1,
     color: "#464B55",
@@ -81,6 +81,416 @@ export const progress_bar = [
   {
     id: 20,
     color: "#464B55",
+  },
+];
+export const progress_bar_5 = [
+  {
+    id: 1,
+    color: "#FFF205",
+  },
+  {
+    id: 2,
+    color: "#FFF205",
+  },
+  {
+    id: 3,
+    color: "#FFF205",
+  },
+  {
+    id: 4,
+    color: "#FFF205",
+  },
+  {
+    id: 5,
+    color: "#FFF205",
+  },
+  {
+    id: 6,
+    color: "#FFF20533",
+  },
+  {
+    id: 7,
+    color: "#FFF20533",
+  },
+  {
+    id: 8,
+    color: "#FFF20533",
+  },
+  {
+    id: 9,
+    color: "#464B55",
+  },
+  {
+    id: 10,
+    color: "#464B55",
+  },
+  {
+    id: 11,
+    color: "#464B55",
+  },
+  {
+    id: 12,
+    color: "#464B55",
+  },
+  {
+    id: 13,
+    color: "#464B55",
+  },
+  {
+    id: 14,
+    color: "#464B55",
+  },
+  {
+    id: 15,
+    color: "#464B55",
+  },
+  {
+    id: 16,
+    color: "#464B55",
+  },
+  {
+    id: 17,
+    color: "#464B55",
+  },
+  {
+    id: 18,
+    color: "#464B55",
+  },
+  {
+    id: 19,
+    color: "#464B55",
+  },
+  {
+    id: 20,
+    color: "#464B55",
+  },
+];
+export const progress_bar_8 = [
+  {
+    id: 1,
+    color: "#FFF205",
+  },
+  {
+    id: 2,
+    color: "#FFF205",
+  },
+  {
+    id: 3,
+    color: "#FFF205",
+  },
+  {
+    id: 4,
+    color: "#FFF205",
+  },
+  {
+    id: 5,
+    color: "#FFF205",
+  },
+  {
+    id: 6,
+    color: "#FFF205",
+  },
+  {
+    id: 7,
+    color: "#FFF205",
+  },
+  {
+    id: 8,
+    color: "#FFF205",
+  },
+  {
+    id: 9,
+    color: "#FFF20533",
+  },
+  {
+    id: 10,
+    color: "#FFF20533",
+  },
+  {
+    id: 11,
+    color: "#FFF20533",
+  },
+  {
+    id: 12,
+    color: "#FFF20533",
+  },
+  {
+    id: 13,
+    color: "#FFF20533",
+  },
+  {
+    id: 14,
+    color: "#464B55",
+  },
+  {
+    id: 15,
+    color: "#464B55",
+  },
+  {
+    id: 16,
+    color: "#464B55",
+  },
+  {
+    id: 17,
+    color: "#464B55",
+  },
+  {
+    id: 18,
+    color: "#464B55",
+  },
+  {
+    id: 19,
+    color: "#464B55",
+  },
+  {
+    id: 20,
+    color: "#464B55",
+  },
+];
+export const progress_bar_13 = [
+  {
+    id: 1,
+    color: "#FFF205",
+  },
+  {
+    id: 2,
+    color: "#FFF205",
+  },
+  {
+    id: 3,
+    color: "#FFF205",
+  },
+  {
+    id: 4,
+    color: "#FFF205",
+  },
+  {
+    id: 5,
+    color: "#FFF205",
+  },
+  {
+    id: 6,
+    color: "#FFF205",
+  },
+  {
+    id: 7,
+    color: "#FFF205",
+  },
+  {
+    id: 8,
+    color: "#FFF205",
+  },
+  {
+    id: 9,
+    color: "#FFF205",
+  },
+  {
+    id: 10,
+    color: "#FFF205",
+  },
+  {
+    id: 11,
+    color: "#FFF205",
+  },
+  {
+    id: 12,
+    color: "#FFF205",
+  },
+  {
+    id: 13,
+    color: "#FFF205",
+  },
+  {
+    id: 14,
+    color: "#FFF20533",
+  },
+  {
+    id: 15,
+    color: "#FFF20533",
+  },
+  {
+    id: 16,
+    color: "#FFF20533",
+  },
+  {
+    id: 17,
+    color: "#464B55",
+  },
+  {
+    id: 18,
+    color: "#464B55",
+  },
+  {
+    id: 19,
+    color: "#464B55",
+  },
+  {
+    id: 20,
+    color: "#464B55",
+  },
+];
+export const progress_bar_16 = [
+  {
+    id: 1,
+    color: "#FFF205",
+  },
+  {
+    id: 2,
+    color: "#FFF205",
+  },
+  {
+    id: 3,
+    color: "#FFF205",
+  },
+  {
+    id: 4,
+    color: "#FFF205",
+  },
+  {
+    id: 5,
+    color: "#FFF205",
+  },
+  {
+    id: 6,
+    color: "#FFF205",
+  },
+  {
+    id: 7,
+    color: "#FFF205",
+  },
+  {
+    id: 8,
+    color: "#FFF205",
+  },
+  {
+    id: 9,
+    color: "#FFF205",
+  },
+  {
+    id: 10,
+    color: "#FFF205",
+  },
+  {
+    id: 11,
+    color: "#FFF205",
+  },
+  {
+    id: 12,
+    color: "#FFF205",
+  },
+  {
+    id: 13,
+    color: "#FFF205",
+  },
+  {
+    id: 14,
+    color: "#FFF205",
+  },
+  {
+    id: 15,
+    color: "#FFF205",
+  },
+  {
+    id: 16,
+    color: "#FFF205",
+  },
+  {
+    id: 17,
+    color: "#FFF20533",
+  },
+  {
+    id: 18,
+    color: "#FFF20533",
+  },
+  {
+    id: 19,
+    color: "#464B55",
+  },
+  {
+    id: 20,
+    color: "#464B55",
+  },
+];
+export const progress_bar_18 = [
+  {
+    id: 1,
+    color: "#FFF205",
+  },
+  {
+    id: 2,
+    color: "#FFF205",
+  },
+  {
+    id: 3,
+    color: "#FFF205",
+  },
+  {
+    id: 4,
+    color: "#FFF205",
+  },
+  {
+    id: 5,
+    color: "#FFF205",
+  },
+  {
+    id: 6,
+    color: "#FFF205",
+  },
+  {
+    id: 7,
+    color: "#FFF205",
+  },
+  {
+    id: 8,
+    color: "#FFF205",
+  },
+  {
+    id: 9,
+    color: "#FFF205",
+  },
+  {
+    id: 10,
+    color: "#FFF205",
+  },
+  {
+    id: 11,
+    color: "#FFF205",
+  },
+  {
+    id: 12,
+    color: "#FFF205",
+  },
+  {
+    id: 13,
+    color: "#FFF205",
+  },
+  {
+    id: 14,
+    color: "#FFF205",
+  },
+  {
+    id: 15,
+    color: "#FFF205",
+  },
+  {
+    id: 16,
+    color: "#FFF205",
+  },
+  {
+    id: 17,
+    color: "#FFF205",
+  },
+  {
+    id: 18,
+    color: "#FFF205",
+  },
+  {
+    id: 19,
+    color: "#FFF20533",
+  },
+  {
+    id: 20,
+    color: "#FFF20533",
   },
 ];
 

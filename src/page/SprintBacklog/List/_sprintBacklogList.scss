@@ -16,18 +16,17 @@
   .dragbox {
     padding: 16px;
 
+    &_item {
+      height: 116px;
+    }
+
     &_have_item {
       border: 8px solid $yellow;
     }
 
-    &_undone{
-      .dragbox_box{
-        height: 116px;
-      }
-      .dragbox_item{
-        height: 116px;
-      }
-      // &_item
+    &_undone {
+
+      // li
       .dragbox_item {
 
         &:nth-child(1) {
@@ -59,10 +58,27 @@
         }
 
       }
+
+      // div
+      .dragbox_box {
+        height: 116px;
+      }
     }
-    &_done{
-      .dragbox_box{
-        height: 90px;
+
+    &_done {
+      // min-height: 472px;
+    }
+
+    &_active {
+      .dragbox_box {
+        border-color: #fff;
+        background: $yellow;
+      }
+      h4,h5,.point{
+        color: $gray700 !important;
+      }
+      .progress{
+        background: $gray700 !important;
       }
     }
 

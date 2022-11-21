@@ -80,6 +80,7 @@ function ProductBacklogList() {
     )
       return;
 
+    // 起始：undone
     if (source.droppableId.includes("undone")) {
       selected = isUndone[sourceIndex];
 
@@ -99,7 +100,18 @@ function ProductBacklogList() {
       ) {
         isUndone[sourceIndex] = {};
         isDone[destinationIndex] = selected;
+
+      // 如果放的位置在 done && done 有資料，就互換
+      } else if (
+        destination.droppableId.includes("done") &&
+        isDone[destinationIndex]?.id
+        ) {
+        isUndone[sourceIndex] = isDone[destinationIndex];
+        isDone[destinationIndex] = selected;
       }
+      console.log(isDone[destinationIndex]?.id, isUndone[sourceIndex]?.id);
+
+    // 起始：done
     } else {
       selected = isDone[sourceIndex];
       // 如果有資料就互換
@@ -109,7 +121,7 @@ function ProductBacklogList() {
         isDone[sourceIndex] = {};
       }
       isDone[destinationIndex] = selected;
-      console.log(selected)
+      console.log(selected);
     }
 
     setDone(isDone);

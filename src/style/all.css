@@ -1635,16 +1635,12 @@ footer div {
   padding: 16px;
 }
 
+.sprint_backlog_list .dragbox_item {
+  height: 116px;
+}
+
 .sprint_backlog_list .dragbox_have_item {
   border: 8px solid #FFF205;
-}
-
-.sprint_backlog_list .dragbox_undone .dragbox_box {
-  height: 116px;
-}
-
-.sprint_backlog_list .dragbox_undone .dragbox_item {
-  height: 116px;
 }
 
 .sprint_backlog_list .dragbox_undone .dragbox_item:nth-child(1) .dragbox_undone_item {
@@ -1667,8 +1663,21 @@ footer div {
   left: 250px;
 }
 
-.sprint_backlog_list .dragbox_done .dragbox_box {
-  height: 90px;
+.sprint_backlog_list .dragbox_undone .dragbox_box {
+  height: 116px;
+}
+
+.sprint_backlog_list .dragbox_active .dragbox_box {
+  border-color: #fff;
+  background: #FFF205;
+}
+
+.sprint_backlog_list .dragbox_active h4, .sprint_backlog_list .dragbox_active h5, .sprint_backlog_list .dragbox_active .point {
+  color: #454545 !important;
+}
+
+.sprint_backlog_list .dragbox_active .progress {
+  background: #454545 !important;
 }
 
 .sprint_backlog_list .dragbox .point_bar {

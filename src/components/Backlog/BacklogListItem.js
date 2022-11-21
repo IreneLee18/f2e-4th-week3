@@ -1,48 +1,78 @@
 import { forwardRef } from "react";
 import { Droppable, Draggable } from "react-beautiful-dnd";
-function BacklogListItem({ todo, i, type }, ref) {
+import { useLocation } from "react-router-dom";
+function BacklogListItem({ todo, i, type, active }, ref) {
+  const { pathname } = useLocation();
   return (
     <>
-      <Droppable droppableId={`${type}_${i}`}>
-        {(provided, snapshot) => (
+      {pathname.includes("product_backlog_list") && (
+        <>
+          <Droppable droppableId={`${type}_${i}`}>
+            {(provided, snapshot) => (
+              <li
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+                className={`dragbox_item ${
+                  type === "undone"
+                    ? snapshot.isDraggingOver && "dragbox_undone_active"
+                    : snapshot.isDraggingOver && "dragbox_done_active"
+                }`}
+                style={
+                  type === "done" && todo.id
+                    ? { border: "none", position: "relative" }
+                    : {}
+                }
+              >
+                <Draggable
+                  draggableId={todo.id ? `${type}_${todo.id}` : `${type}_${i}`}
+                  index={i}
+                >
+                  {(provided) => (
+                    <div
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      className={`dragbox_box ${
+                        type === "undone"
+                          ? todo.id && `dragbox_undone_item dragbox_have_item`
+                          : todo.id
+                          ? `dragbox_have_item`
+                          : `dragbox_done_item`
+                      }`}
+                    >
+                      <div className="dragbox_title">
+                        <h4 style={todo.content ? { marginBottom: "8px" } : {}}>
+                          {todo.title}
+                        </h4>
+                        <h5>{todo.content}</h5>
+                      </div>
+                    </div>
+                  )}
+                </Draggable>
+                {provided.placeholder}
+              </li>
+            )}
+          </Droppable>
+        </>
+      )}
+      {pathname.includes("sprint_backlog_list") && (
+        <>
           <li
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-            className={`dragbox_item ${
-              type === "undone"
-                ? snapshot.isDraggingOver
-                  ? "dragbox_undone_active"
-                  : ""
-                : snapshot.isDraggingOver
-                ? "dragbox_done_active"
-                : ""
-            }`}
-            style={
-              type === "done" && todo.id
-                ? { border: "none", position: "relative" }
-                : {}
-            }
+            key={todo.id}
+            className={`dragbox_item ${active && "dragbox_active"}`}
           >
             <Draggable
-              draggableId={
-                todo.id ? `${type}_${todo.id}` : `${type}_${i}`
-              }
+              draggableId={todo.id ? `${type}_${todo.id}` : `${type}_${i}`}
               index={i}
             >
               {(provided) => (
                 <div
-                  className={`dragbox_box ${
-                    type === "undone"
-                      ? todo.id
-                        ? `dragbox_undone_item dragbox_have_item`
-                        : ""
-                      : todo.id
-                      ? `dragbox_have_item`
-                      : `dragbox_done_item`
-                  }`}
                   ref={provided.innerRef}
                   {...provided.draggableProps}
                   {...provided.dragHandleProps}
+                  className={`dragbox_box ${todo.id && "dragbox_have_item"} ${
+                    type === "undone" && "dragbox_undone_item"
+                  }`}
                 >
                   <div className="dragbox_title">
                     <h4 style={todo.content ? { marginBottom: "8px" } : {}}>
@@ -50,13 +80,22 @@ function BacklogListItem({ todo, i, type }, ref) {
                     </h4>
                     <h5>{todo.content}</h5>
                   </div>
+                  <ul className="point_bar">
+                    <li className="point">
+                      {todo.point}
+                      {todo.id && "點"}
+                    </li>
+                    {todo.progress &&
+                      todo.progress.map((progress) => (
+                        <li className="progress" key={progress}></li>
+                      ))}
+                  </ul>
                 </div>
               )}
             </Draggable>
-            {provided.placeholder}
           </li>
-        )}
-      </Droppable>
+        </>
+      )}
     </>
   );
 }

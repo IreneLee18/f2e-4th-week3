@@ -1,19 +1,26 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, forwardRef, useImperativeHandle } from "react";
 function Modal({ character, text, btn_text }, ref) {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [modalState, setModalState] = useState(false);
   useImperativeHandle(ref, () => ({
     openModal: () => setModalState(true),
   }));
-  const handleCloseModal = () =>{
-    if(btn_text==='返回挑戰'||btn_text==='再試試看'){
-      setModalState(false)
-    }else{
-      setModalState(false)
-      navigate('/spring_backlog')
+  const handleCloseModal = () => {
+    if (pathname.includes("product_backlog_list")) {
+      if (btn_text === "返回挑戰" || btn_text === "再試試看") {
+        setModalState(false);
+      } else {
+        setModalState(false);
+        navigate("/sprint_backlog");
+      }
     }
-  }
+
+    if (pathname.includes("sprint_backlog_list")) {
+      setModalState(false);
+    }
+  };
 
   return (
     <>
