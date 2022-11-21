@@ -16,7 +16,9 @@
         "../page/ProductBacklog/Start/_productBacklogStart.scss",
         "../page/ProductBacklog/List/_productBacklogList.scss",
         "../page/SprintBacklog/Start/_sprintBacklogStart.scss",
-        "../page/SprintBacklog/List/_sprintBacklogList.scss"
+        "../page/SprintBacklog/List/_sprintBacklogList.scss",
+        "../page/Sprint/Start/_sprintStart.scss",
+        "../page/Sprint/List/_sprintList.scss"
     ],
     "names": [],
     "file": "all.css"

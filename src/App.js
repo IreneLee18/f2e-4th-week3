@@ -6,6 +6,8 @@ import ProductBacklogStart from "./page/ProductBacklog/Start/ProductBacklogStart
 import ProductBacklogList from "./page/ProductBacklog/List/ProductBacklogList";
 import SprintBacklogStart from "./page/SprintBacklog/Start/SprintBacklogStart";
 import SprintBacklogList from "./page/SprintBacklog/List/SprintBacklogList";
+import SpritStart from "./page/Sprint/Start/SpritStart";
+import SprintList from "./page/Sprint/List/SprintList";
 import { useState, useEffect } from "react";
 import Stars from "./components/Stars";
 
@@ -28,6 +30,8 @@ function App() {
           <Route path="product_backlog_list" element={<ProductBacklogList />} />
           <Route path="sprint_backlog" element={<SprintBacklogStart />} />
           <Route path="sprint_backlog_list" element={<SprintBacklogList />} />
+          <Route path="sprint" element={<SpritStart />} />
+          <Route path="sprint_list" element={<SprintList />} />
         </Route>
       </Routes>
       {!isLoading && (
