@@ -102,12 +102,6 @@
     background: $background10;
     width: 50%;
 
-    // ul {
-    //   @media (max-width:414px) {
-    //     padding: 0 8px;
-    //   }
-    // }
-
     li {
       height: 90px;
 
@@ -135,109 +129,76 @@
     }
   }
 
-  .title {
-    padding: 8px;
-    @include flex(center, start);
+  .dragbox {
 
-    @media (max-width:414px) {
-      flex-direction: column;
-    }
-
-    h3 {
-      margin-right: 16px;
-    }
-  }
-
-  .undone {
-    position: relative;
-    @media (max-width:414px) {
-      @include flex(center,center);
-      flex-wrap: wrap;
-    }
-    li {
-      @media (max-width:414px) {
-        // 製作跟 done 的 item 一樣尺寸
-        width: 73.8%;
-      }
-      &:nth-child(1) {
-        .undone_item {
-          top: 20px;
-          left: 80px;
+    &_undone {
+      li {
+        @media (max-width:414px) {
+          // 製作跟 done 的 item 一樣尺寸
+          width: 73.8%;
         }
       }
 
-      &:nth-child(2) {
-        .undone_item {
-          top: 130px;
-          left: 260px;
+      //li
+      &_active {
+        .dragbox_box {
+          background: $pink;
+          border-color: #fff;
         }
       }
 
-      &:nth-child(3) {
-        .undone_item {
-          left: 30px;
+      // &_item
+      .dragbox_item {
+
+        &:nth-child(1) {
+          .dragbox_undone_item {
+            top: 20px;
+            left: 80px;
+          }
         }
-      }
 
-      &:nth-child(4) {
-        .undone_item {
-          top: 250px;
-          left: 250px;
+        &:nth-child(2) {
+          .dragbox_undone_item {
+            top: 130px;
+            left: 260px;
+          }
         }
-      }
-      
-    }
 
-    .undone_active {
-      div {
-        border-color: #fff;
-        background: $pink;
-      }
-    }
-  }
+        &:nth-child(3) {
+          .dragbox_undone_item {
+            left: 30px;
+          }
+        }
 
-  .done {
-    @include flex-center;
-    flex-wrap: wrap;
-    padding: 8px 0;
+        &:nth-child(4) {
+          .dragbox_undone_item {
+            top: 250px;
+            left: 250px;
+          }
+        }
 
-    li {
-      width: 90%;
-      margin: 8px 0;
-      border: 8px dashed $gray500;
-
-    }
-
-    .done_active {
-      border-color: #fff;
-    }
-
-  }
-
-  .have_item {
-    position: absolute;
-    height: 90px;
-    padding: 8px 16px;
-    border: 8px solid $pink;
-    @include flex(start, center);
-    flex-direction: column;
-
-    @media (max-width:414px) {
-      position: static;
-    }
-
-    h4,
-    h5 {
-      white-space: nowrap;
-      @media (max-width:414px) {
-        white-space: normal;
-        font-size: 18px;
       }
     }
 
-    h5 {
-      font-size: 12px;
+    // div
+    &_box {
+      height: 90px;
+    }
+
+    // div
+    &_have_item {
+      border: 8px solid $pink;
+    }
+
+    &_done {
+      li {
+        border: 8px dashed $gray500;
+      }
+
+      // li
+      &_active {
+        border-color: #fff !important;
+      }
     }
   }
-
 }

@@ -11,7 +11,7 @@ function Modal({ character, text, btn_text }, ref) {
       setModalState(false)
     }else{
       setModalState(false)
-      navigate('/spring_planning')
+      navigate('/spring_backlog')
     }
   }
 

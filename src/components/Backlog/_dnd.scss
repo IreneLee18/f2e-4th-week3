@@ -1,0 +1,85 @@
+.title_undone {
+  padding: 8px;
+  @include flex(center, start);
+
+  @media (max-width:414px) {
+    flex-direction: column;
+  }
+
+  h3 {
+    margin-right: 16px;
+  }
+}
+
+.title_done {
+  @include flex(end, space-between);
+  padding: 16px;
+
+  h4 {
+    color: $yellow;
+    font-size: 12px;
+  }
+}
+
+// div
+.dragbox {
+  &_box {
+    padding: 8px 16px;
+  }
+
+  // ul
+  &_undone {
+    position: relative;
+
+    @media (max-width:414px) {
+      @include flex(center, center);
+      flex-wrap: wrap;
+    }
+
+    //li
+    &_active {
+      .dragbox_box {
+        border-color: #fff;
+      }
+    }
+
+  }
+
+
+  // ul
+  &_done {
+    @include flex-center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+
+    li {
+      width: 90%;
+      margin: 8px 0;
+    }
+  }
+
+  // div
+  &_have_item {
+    position: absolute;
+    @include flex(start, center);
+    flex-direction: column;
+
+    @media (max-width:414px) {
+      position: static;
+    }
+
+    h4,
+    h5 {
+      white-space: nowrap;
+
+      @media (max-width:414px) {
+        white-space: normal;
+        font-size: 18px;
+      }
+    }
+
+    h5 {
+      font-size: 12px;
+    }
+  }
+}

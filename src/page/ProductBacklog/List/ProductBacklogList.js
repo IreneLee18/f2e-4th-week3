@@ -1,17 +1,20 @@
 import PO from "../../../style/image/character/PO.png";
-import ProductBacklogListItem from "../components/ProductBacklogListItem";
-import ProductBacklogFooter from "../components/ProductBacklogFooter";
+import ProductBacklogListItem from "../../../components/Backlog/BacklogListItem";
+import BacklogFooter from "../../../components/Backlog/BacklogFooter";
 import Modal from "../../../components/Modal/Modal";
 import {
   product_backlog_undone,
   product_backlog_done,
   product_backlog_correct_done,
-} from "../../../utils/Data";
+} from "../../../utils/ProductBacklogData";
+import { randomArray } from "../../../utils/RadomArray";
 import { DragDropContext } from "react-beautiful-dnd";
 import { useState, useRef, useEffect } from "react";
 
 function ProductBacklogList() {
-  const [undone, setUndone] = useState(product_backlog_undone);
+  const [undone, setUndone] = useState(
+    randomArray(product_backlog_undone, product_backlog_undone.length)
+  );
   const [done, setDone] = useState(product_backlog_done);
   const [doneID, setDoneID] = useState("");
   const [footerCss, setFooterCss] = useState({});
@@ -70,42 +73,56 @@ function ProductBacklogList() {
     )
       return;
 
-    // Source Logic
+    // done 資料不能丟回 undone
+    if (
+      source.droppableId.includes("done") &&
+      destination.droppableId.includes("undone")
+    )
+      return;
+
     if (source.droppableId.includes("undone")) {
       selected = isUndone[sourceIndex];
-      if (!isUndone[destinationIndex]?.id) {
+
+      // 如果放的位置在 undone && undone 沒有資料，就賦予值
+      if (
+        destination.droppableId.includes("undone") &&
+        !isUndone[destinationIndex]?.id
+      ) {
         isUndone[sourceIndex] = {};
+        isUndone[destinationIndex] = selected;
+      }
+
+      // 如果放的位置在 done && done 沒有資料，就賦予值
+      if (
+        destination.droppableId.includes("done") &&
+        !isDone[destinationIndex]?.id
+      ) {
+        isUndone[sourceIndex] = {};
+        isDone[destinationIndex] = selected;
       }
     } else {
       selected = isDone[sourceIndex];
-      if (!isDone[destinationIndex]?.id) {
+      // 如果有資料就互換
+      if (isDone[destinationIndex]?.id) {
+        isDone[sourceIndex] = isDone[destinationIndex];
+      } else {
         isDone[sourceIndex] = {};
       }
-    }
-    console.log(isUndone[destinationIndex]?.id, isDone[destinationIndex]?.id);
-
-    // Destination Logic
-    if (destination.droppableId.includes("undone")) {
-      if (!isUndone[destinationIndex]?.id) {
-        isUndone[destinationIndex] = selected;
-      }
-    } else {
-      if (!isDone[destinationIndex]?.id) {
-        isDone[destinationIndex] = selected;
-      }
+      isDone[destinationIndex] = selected;
+      console.log(selected)
     }
 
     setDone(isDone);
     setUndone(isUndone);
   };
 
-  window.addEventListener('resize',()=>{
+  window.addEventListener("resize", () => {
     if (window.innerWidth <= 820) {
       setFooterCss({ padding: "20px 0" });
-    }else{
-      setFooterCss({})
+    } else {
+      setFooterCss({});
     }
-  })
+  });
   useEffect(() => {
     let doneId = done.map((item) => (item.id ? item.id : "null")).join("_");
     setDoneID(doneId);
@@ -128,11 +145,11 @@ function ProductBacklogList() {
           <div className="product_backlog_list_body">
             {/* undone */}
             <div className="dropbox undone_dropbox">
-              <div className="title">
+              <div className="title_undone">
                 <h3>產品待辦清單</h3>
                 <h4>Product Backlog</h4>
               </div>
-              <ul className="undone">
+              <ul className="dragbox dragbox_undone">
                 {undone.map((item, index) => (
                   <ProductBacklogListItem
                     key={item.id ? `undone_${item.id}` : `undone_${index}`}
@@ -151,7 +168,7 @@ function ProductBacklogList() {
             </div>
             {/* done */}
             <div className="dropbox done_dropbox">
-              <ul className="done">
+              <ul className="dragbox dragbox_done">
                 {done.map((item, index) => (
                   <ProductBacklogListItem
                     key={item.id ? `done_${item.id}` : `done_${index}`}
@@ -164,7 +181,7 @@ function ProductBacklogList() {
             </div>
           </div>
         </DragDropContext>
-        <ProductBacklogFooter
+        <BacklogFooter
           last={"/product_backlog"}
           btnTxt={"我完成了"}
           handleClickOpenModal={handleClickFinish}

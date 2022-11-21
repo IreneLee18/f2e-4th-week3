@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-function ProductBacklogFooter({
+function BacklogFooter({
   last,
   next,
   btnTxt,
@@ -10,7 +10,7 @@ function ProductBacklogFooter({
   const navigate = useNavigate();
 
   return (
-    <div className="product_backlog_footer" style={css ? css : {}}>
+    <div className="backlog_footer" style={css ? css : {}}>
       <button onClick={() => navigate(last)}>&lt;</button>
       {next ? (
         <button onClick={() => navigate(next)}>{btnTxt}</button>
@@ -21,4 +21,4 @@ function ProductBacklogFooter({
   );
 }
 
-export default ProductBacklogFooter;
+export default BacklogFooter;

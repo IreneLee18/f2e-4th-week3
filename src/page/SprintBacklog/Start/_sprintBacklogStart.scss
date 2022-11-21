@@ -1,0 +1,75 @@
+.sprint_backlog_start {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 48px;
+
+  &_character {
+    padding-top: 48px;
+    @include flex(start, space-between);
+    &:last-child{
+      padding-bottom: 48px;
+    }
+  }
+
+  .character {
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  &_character_image {
+    @include size(180px, 152px);
+  }
+
+  .po_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true', cover);
+  }
+
+  .sm_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true', cover);
+  }
+
+  .rd_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true', cover);
+  }
+
+  .content {
+    width: 1076px;
+
+    h4 {
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      padding: 16px 32px;
+    }
+
+    span {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  .po {
+    .content {
+      h4 {
+        background: #FF11774D;
+      }
+    }
+  }
+
+  .sm {
+    .content {
+      h4 {
+        background: darken($green, 30%);
+      }
+    }
+  }
+
+  .rd {
+    .content {
+      h4 {
+        background: darken($yellow, 30%);
+      }
+    }
+  }
+}

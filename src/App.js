@@ -4,6 +4,8 @@ import Welcome from "./page/Welcome/Welcome";
 import Roles from "./page/Roles/Roles";
 import ProductBacklogStart from "./page/ProductBacklog/Start/ProductBacklogStart";
 import ProductBacklogList from "./page/ProductBacklog/List/ProductBacklogList";
+import SprintBacklogStart from "./page/SprintBacklog/Start/SprintBacklogStart";
+import SprintBacklogList from "./page/SprintBacklog/List/SprintBacklogList";
 import { useState, useEffect } from "react";
 import Stars from "./components/Stars";
 
@@ -24,6 +26,8 @@ function App() {
           <Route path="roles" element={<Roles />} />
           <Route path="product_backlog" element={<ProductBacklogStart />} />
           <Route path="product_backlog_list" element={<ProductBacklogList />} />
+          <Route path="sprint_backlog" element={<SprintBacklogStart />} />
+          <Route path="sprint_backlog_list" element={<SprintBacklogList />} />
         </Route>
       </Routes>
       {!isLoading && (

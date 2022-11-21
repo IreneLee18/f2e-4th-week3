@@ -1,4 +1,4 @@
-import ProductBacklogFooter from "../components/ProductBacklogFooter";
+import BacklogFooter from "../../../components/Backlog/BacklogFooter";
 const tableArr3 = [...Array(3).keys()];
 function ProductBacklogStart() {
   return (
@@ -25,7 +25,7 @@ function ProductBacklogStart() {
           </div>
         </div>
       </div>
-      <ProductBacklogFooter
+      <BacklogFooter
         last={"/roles"}
         next={"/product_backlog_list"}
         btnTxt={"接受挑戰！"}

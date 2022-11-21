@@ -6,6 +6,9 @@
 @import '../components/Modal/modal';
 @import '../page/Welcome/welcome';
 @import '../page/Roles/roles';
-@import '../page/ProductBacklog/productBacklog';
+@import '../components/Backlog/backlogFooter';
+@import '../components/Backlog/dnd';
 @import '../page/ProductBacklog/Start/productBacklogStart';
 @import '../page/ProductBacklog/List/productBacklogList';
+@import '../page/SprintBacklog/Start/sprintBacklogStart';
+@import '../page/SprintBacklog/List/sprintBacklogList';
