@@ -14,7 +14,7 @@ import {
 } from "../../../utils/SprintBacklogData";
 import { randomArray } from "../../../utils/RadomArray";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 function SprintBacklogList() {
   const [undone, setUndone] = useState(

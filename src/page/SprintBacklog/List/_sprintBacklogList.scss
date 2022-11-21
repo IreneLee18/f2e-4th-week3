@@ -2,15 +2,27 @@
   width: 90vw;
   margin: 0 auto;
   padding: 48px 0;
+  @media (max-width:414px) {
+    padding: 24px 0 12px;
+  }
 
   &_body {
     @include flex-justify-content-space-between;
+
+    @media (max-width:820px) {
+      flex-wrap: wrap;
+    }
   }
 
   .dropbox {
     background: $background10;
     width: 49%;
     margin-bottom: 32px;
+
+    @media (max-width:820px) {
+      width: 100%;
+    }
+
   }
 
   .dragbox {
@@ -25,9 +37,16 @@
     }
 
     &_undone {
+      @media (max-width:820px) {
+        min-height: 300px;
+      }
 
       // li
       .dragbox_item {
+        @media (max-width:414px) {
+          width: 90%;
+          margin-bottom: 10px;
+        }
 
         &:nth-child(1) {
           .dragbox_undone_item {
@@ -65,20 +84,20 @@
       }
     }
 
-    &_done {
-      // min-height: 472px;
-    }
-
     &_active {
       .dragbox_box {
         border-color: #fff;
         background: $yellow;
       }
-      h4,h5,.point{
-        color: $gray700 !important;
+
+      h4,
+      h5,
+      .point {
+        color: $gray700  !important;
       }
-      .progress{
-        background: $gray700 !important;
+
+      .progress {
+        background: $gray700  !important;
       }
     }
 
@@ -103,16 +122,33 @@
 
   .title_undone {
     padding: 16px 16px 24px;
-    // bottom: 50px
+    @media (max-width:414px) {
+      padding: 16px 16px 0;
+    }
   }
-
+  .title_done {
+    @include flex(end, space-between);
+    padding: 16px;
+    @media (max-width:414px) {
+      flex-direction: column;
+    }
+  
+    h4 {
+      color: $yellow;
+      font-size: 12px;
+    }
+  }
   .progress_bar {
     display: flex;
 
     li {
-      width: 100%;
-      height: 32px;
       margin-right: 8px;
+      @include size(100%, 32px);
+
+      @media (max-width:414px) {
+        @include size(100%, 16px);
+
+      }
 
       &:last-child {
         margin-right: 0;

@@ -11,16 +11,6 @@
   }
 }
 
-.title_done {
-  @include flex(end, space-between);
-  padding: 16px;
-
-  h4 {
-    color: $yellow;
-    font-size: 12px;
-  }
-}
-
 // div
 .dragbox {
   &_box {
