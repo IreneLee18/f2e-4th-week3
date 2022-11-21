@@ -2,6 +2,7 @@
 @import './scss/mixin';
 @import './scss/reset';
 @import './scss/index';
+@import './scss/direction';
 @import '../components/Loading/loading';
 @import '../components/Modal/modal';
 @import '../page/Welcome/welcome';
@@ -10,7 +11,6 @@
 @import '../components/Backlog/dnd';
 @import '../page/ProductBacklog/Start/productBacklogStart';
 @import '../page/ProductBacklog/List/productBacklogList';
-@import '../page/SprintBacklog/Start/sprintBacklogStart';
 @import '../page/SprintBacklog/List/sprintBacklogList';
 @import '../page/Sprint/Start/sprintStart';
 @import '../page/Sprint/List/sprintList';

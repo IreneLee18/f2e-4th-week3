@@ -1,0 +1,78 @@
+.direction {
+  padding-top: 48px;
+  @include flex(start, space-between);
+
+  @media (max-width:820px) {
+    flex-wrap: wrap;
+    @include flex-center;
+  }
+
+  &:last-child {
+    padding-bottom: 48px;
+  }
+
+  &_po {
+    .direction_direction_item {
+      background: #FF11774D;
+    }
+  }
+
+  &_sm {
+    .direction_direction_item {
+      background: darken($green, 30%);
+    }
+  }
+
+  &_rd {
+    .direction_direction_item {
+      background: darken($yellow, 30%);
+    }
+  }
+
+  &_character {
+    @include flex-center;
+    flex-direction: column;
+
+    &_image {
+      @include size(180px, 152px);
+    }
+
+    .po_image {
+      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true', cover);
+    }
+
+    .sm_image {
+      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true', cover);
+    }
+
+    .rd_image {
+      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true', cover);
+    }
+  }
+
+  &_direction {
+    width: 1076px;
+
+    &_item {
+      margin-bottom: 8px;
+      padding: 16px 32px;
+
+      @media (max-width:414px) {
+        padding: 16px;
+        h4{
+          font-size: 18px;
+        }
+      }
+    }
+
+    h4 {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+  }
+
+  .title {
+    font-size: 24px !important;
+  }
+}

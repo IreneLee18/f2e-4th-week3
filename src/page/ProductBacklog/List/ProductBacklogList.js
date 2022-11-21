@@ -142,7 +142,7 @@ function ProductBacklogList() {
 
   return (
     <>
-      <div className="container product_backlog_list">
+      <div className="container view90_center_mb48 product_backlog_list">
         <div className="product_backlog_list_header">
           <div className="character"></div>
           <div className="text">

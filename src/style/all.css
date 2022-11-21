@@ -249,6 +249,12 @@ footer div {
   }
 }
 
+.view90_center_mb48 {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
 .star {
   position: absolute;
   width: 0px;
@@ -334,6 +340,123 @@ footer div {
   50% {
     opacity: 0;
   }
+}
+
+.direction {
+  padding-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 820px) {
+  .direction {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.direction:last-child {
+  padding-bottom: 48px;
+}
+
+.direction_po .direction_direction_item {
+  background: #FF11774D;
+}
+
+.direction_sm .direction_direction_item {
+  background: #326700;
+}
+
+.direction_rd .direction_direction_item {
+  background: #6b6500;
+}
+
+.direction_character {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.direction_character_image {
+  width: 180px;
+  height: 152px;
+}
+
+.direction_character .po_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.direction_character .sm_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.direction_character .rd_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.direction_direction {
+  width: 1076px;
+}
+
+.direction_direction_item {
+  margin-bottom: 8px;
+  padding: 16px 32px;
+}
+
+@media (max-width: 414px) {
+  .direction_direction_item {
+    padding: 16px;
+  }
+  .direction_direction_item h4 {
+    font-size: 18px;
+  }
+}
+
+.direction_direction h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.5;
+}
+
+.direction .title {
+  font-size: 24px !important;
 }
 
 .loading_page {
@@ -922,7 +1045,6 @@ footer div {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-right: 80px;
   }
 }
 
@@ -1255,9 +1377,10 @@ footer div {
   padding-bottom: 0;
 }
 
-.product_backlog_list {
-  width: 90vw;
-  margin: 0 auto;
+@media (max-width: 820px) {
+  .product_backlog_list {
+    margin-bottom: 24px;
+  }
 }
 
 .product_backlog_list_header {
@@ -1358,7 +1481,7 @@ footer div {
 .product_backlog_list_header .jira_logo {
   width: 160px;
   height: 64px;
-  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/jira_logo%201.png?raw=true");
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/logo_jira.png?raw=true");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -1381,6 +1504,7 @@ footer div {
   .product_backlog_list_body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 24px;
   }
 }
 
@@ -1494,108 +1618,6 @@ footer div {
 
 .product_backlog_list_body .dragbox_done_active {
   border-color: #fff !important;
-}
-
-.sprint_backlog_start {
-  width: 90vw;
-  margin: 0 auto;
-  margin-bottom: 48px;
-}
-
-.sprint_backlog_start_character {
-  padding-top: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.sprint_backlog_start_character:last-child {
-  padding-bottom: 48px;
-}
-
-.sprint_backlog_start .character {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.sprint_backlog_start_character_image {
-  width: 180px;
-  height: 152px;
-}
-
-.sprint_backlog_start .po_image {
-  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.sprint_backlog_start .sm_image {
-  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.sprint_backlog_start .rd_image {
-  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.sprint_backlog_start .content {
-  width: 1076px;
-}
-
-.sprint_backlog_start .content h4 {
-  margin-bottom: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  line-height: 1.5;
-  padding: 16px 32px;
-}
-
-.sprint_backlog_start .content span {
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-.sprint_backlog_start .po .content h4 {
-  background: #FF11774D;
-}
-
-.sprint_backlog_start .sm .content h4 {
-  background: #326700;
-}
-
-.sprint_backlog_start .rd .content h4 {
-  background: #6b6500;
-}
-
-.sprint_backlog_list {
-  width: 90vw;
-  margin: 0 auto;
-  padding: 48px 0;
 }
 
 @media (max-width: 414px) {
@@ -1782,5 +1804,123 @@ footer div {
 
 .sprint_backlog_list .progress_bar li:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 820px) {
+  .sprint_start {
+    margin-bottom: 0;
+  }
+  .sprint_start h3 {
+    font-size: 24px;
+  }
+  .sprint_start h4 {
+    font-size: 18px;
+  }
+}
+
+.sprint_start_nav {
+  margin-top: 40px;
+  background: #2F343F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px;
+}
+
+@media (max-width: 414px) {
+  .sprint_start_nav {
+    padding: 8px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.sprint_start_nav_item {
+  padding: 8px 0;
+  text-align: center;
+  cursor: pointer;
+  width: 33.3333%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (max-width: 414px) {
+  .sprint_start_nav_item {
+    width: 100%;
+  }
+}
+
+.sprint_start_nav_item:hover {
+  background: #464B55;
+  color: #fff;
+}
+
+.sprint_start_nav_item_active {
+  background: #FFF205;
+  color: #181E2A;
+}
+
+.sprint_start_nav_item_active:hover {
+  background: #FFF205;
+  color: #181E2A;
+}
+
+.sprint_start_content {
+  padding: 40px;
+}
+
+@media (max-width: 414px) {
+  .sprint_start_content {
+    padding: 20px 10px;
+  }
+  .sprint_start_content h3 {
+    font-size: 18px;
+  }
+}
+
+.sprint_start_content li {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 414px) {
+  .sprint_start_content li {
+    margin-bottom: 10px;
+  }
+}
+
+.sprint_start_content li:last-child {
+  margin-bottom: 0;
+}
+
+.sprint_start_content .confluence h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sprint_start_content .confluence span {
+  display: inline-block;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/logo_confluence.png?raw=true");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 228.77px;
+}
+
+@media (max-width: 820px) {
+  .sprint_start_content .confluence span {
+    width: 195.77px;
+  }
+}
+
+@media (max-width: 414px) {
+  .sprint_start_content .confluence span {
+    width: 135.77px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
