@@ -1,4 +1,4 @@
-export const direction = {
+export const description_start = {
   id: "rd",
   title: "開發團隊",
   contents: [
@@ -9,6 +9,14 @@ export const direction = {
     [
       "Sprint 是一個短衝，如同前面敏捷教練所提到的，一次sprint一次sprint週期為2周。開發團隊會在這期間執行開發。在這段期間內，開發團隊舉辦每日站立會議（Daily Scrum） ，追蹤成員間的工作狀況。除了每日站立會議，在 Sprint 的結束也會包含 短衝檢視會議（Sprint Review）、短衝自省會議（Sprint Retrospective）。",
     ],
+  ],
+};
+export const description_list = {
+  id: "rd",
+  title: "開發團隊",
+  contents: [
+    ["那你來試試看，在這經典的 Scrum 流程圖中，這些流程分別代表哪一個會議呢？"],
+    ["請你試著把左下方三個方塊，拖拉至正確的位置上。"],
   ],
 };
 export const navbar = [

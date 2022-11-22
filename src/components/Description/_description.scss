@@ -1,4 +1,4 @@
-.direction {
+.description {
   padding-top: 48px;
   @include flex(start, space-between);
 
@@ -12,19 +12,19 @@
   }
 
   &_po {
-    .direction_direction_item {
+    .description_description_item {
       background: #FF11774D;
     }
   }
 
   &_sm {
-    .direction_direction_item {
+    .description_description_item {
       background: darken($green, 30%);
     }
   }
 
   &_rd {
-    .direction_direction_item {
+    .description_description_item {
       background: darken($yellow, 30%);
     }
   }
@@ -50,7 +50,7 @@
     }
   }
 
-  &_direction {
+  &_description {
     width: 1076px;
 
     &_item {

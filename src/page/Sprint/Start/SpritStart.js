@@ -1,6 +1,7 @@
+import Description from "../../../components/Description/Description";
 import BacklogFooter from "../../../components/Backlog/BacklogFooter";
 import {
-  direction,
+  description_start,
   navbar,
   daily_content,
   review_content,
@@ -28,21 +29,7 @@ function SpritStart() {
   };
   return (
     <div className="container sprint_start view90_center_mb48">
-      <div className={`direction direction_${direction.id}`}>
-        <div className="direction_character">
-          <div
-            className={`direction_character_image ${direction.id}_image`}
-          ></div>
-          <h4 className="title">{direction.title}</h4>
-        </div>
-        <div className="direction_direction">
-          {direction.contents.map((content, i) => (
-            <div key={nanoid()} className="direction_direction_item">
-              <h4>{content}</h4>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Description character={description_start} />
       <div>
         <nav>
           <ul className="sprint_start_nav">
@@ -69,7 +56,9 @@ function SpritStart() {
           ))}
           {currentNav === "retrospective" && (
             <li className="confluence">
-              <h3>推薦工具：<span></span></h3>
+              <h3>
+                推薦工具：<span></span>
+              </h3>
             </li>
           )}
         </ul>
