@@ -109,6 +109,15 @@ function SprintList() {
     setUndone(isUndone);
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 820) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  });
+
   return (
     <>
       <div className="container view90_center_mb48 sprint_list">
@@ -126,103 +135,114 @@ function SprintList() {
                 ))}
               </ul>
               {/* PC Size */}
-              <ul className="sprint_list_right">
-                <li className="done_list_start"></li>
-                {/* <li className="done_list"> */}
-                {/* <ul> */}
-                {done.map((todo, index) => (
-                  <Droppable droppableId={`done_${index}`} key={nanoid()}>
-                    {(provided, snapshot) => (
-                      <li
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                        key={nanoid()}
-                        className={`dragbox_item ${
-                          snapshot.isDraggingOver && "dragbox_done_active"
-                        } ${todo.id && "dragbox__have_item"}`}
-                      >
-                        <Draggable draggableId={`done_${index}`} index={index}>
+              {!isMobile && (
+                <ul className="sprint_list_right">
+                  <li className="done_list_start"></li>
+                  <li className="done_list">
+                    <ul>
+                      {done.map((todo, index) => (
+                        <Droppable droppableId={`done_${index}`} key={nanoid()}>
                           {(provided, snapshot) => (
-                            <div
+                            <li
                               ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              className={`dragbox_box dragbox_box_${index}${
-                                snapshot.isDragging && `dragbox_active`
-                              }`}
+                              {...provided.droppableProps}
+                              key={nanoid()}
+                              className={`dragbox_item ${
+                                snapshot.isDraggingOver && "dragbox_done_active"
+                              } ${todo.id && "dragbox__have_item"}`}
                             >
-                              <div className="dragbox_title">
-                                <h4
-                                  style={
-                                    todo.content ? { marginBottom: "8px" } : {}
-                                  }
-                                >
-                                  {todo.ch_title}
-                                  {snapshot.isDraggingOver}
-                                </h4>
-                                <h5>{todo.eg_title}</h5>
-                              </div>
-                            </div>
+                              <Draggable
+                                draggableId={`done_${index}`}
+                                index={index}
+                              >
+                                {(provided, snapshot) => (
+                                  <div
+                                    ref={provided.innerRef}
+                                    {...provided.draggableProps}
+                                    {...provided.dragHandleProps}
+                                    className={`dragbox_box dragbox_box_${index} ${
+                                      snapshot.isDragging && `dragbox_active`
+                                    }`}
+                                  >
+                                    <div className="dragbox_title">
+                                      <h4
+                                        style={
+                                          todo.content
+                                            ? { marginBottom: "8px" }
+                                            : {}
+                                        }
+                                      >
+                                        {todo.ch_title}
+                                        {snapshot.isDraggingOver}
+                                      </h4>
+                                      <h5>{todo.eg_title}</h5>
+                                    </div>
+                                  </div>
+                                )}
+                              </Draggable>
+                              {provided.placeholder}
+                            </li>
                           )}
-                        </Draggable>
-                        {provided.placeholder}
-                      </li>
-                    )}
-                  </Droppable>
-                ))}
-                {/* </ul> */}
-                {/* </li> */}
-              </ul>
+                        </Droppable>
+                      ))}
+                    </ul>
+                  </li>
+                </ul>
+              )}
               {/* Mobile Size */}
-              <ul className="sprint_list_right_mobile">
-                <li className="sprint">
-                  <h3>短衝</h3>
-                  <h3>Sprint</h3>
-                </li>
-                {done.map((todo, index) => (
-                  <Droppable droppableId={`done_${index}`} key={nanoid()}>
-                    {(provided, snapshot) => (
-                      <li
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                        key={nanoid()}
-                        className={`${
-                          snapshot.isDraggingOver && "dragbox_done_active"
-                        } ${todo.id && "dragbox__have_item"}`}
-                      >
-                        <Draggable
-                          draggableId={todo?.id ? todo.id : `done_${index}`}
-                          index={index}
+              {isMobile && (
+                <ul className="sprint_list_right_mobile">
+                  <li className="sprint">
+                    <h3>短衝</h3>
+                    <h3>Sprint</h3>
+                  </li>
+                  {done.map((todo, index) => (
+                    <Droppable droppableId={`done_${index}`} key={nanoid()}>
+                      {(provided, snapshot) => (
+                        <li
+                          ref={provided.innerRef}
+                          {...provided.droppableProps}
+                          key={nanoid()}
+                          className={`${
+                            snapshot.isDraggingOver && "dragbox_done_active"
+                          } ${todo.id && "dragbox__have_item"}`}
                         >
-                          {(provided, snapshot) => (
-                            <div
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              className={`dragbox_box ${
-                                snapshot.isDragging && `dragbox_active`
-                              }`}
-                            >
-                              <div className="dragbox_title">
-                                <h4
-                                  style={
-                                    todo.content ? { marginBottom: "8px" } : {}
-                                  }
-                                >
-                                  {todo.ch_title}
-                                  {snapshot.isDraggingOver}
-                                </h4>
-                                <h5>{todo.eg_title}</h5>
+                          <Draggable
+                            draggableId={todo?.id ? todo.id : `done_${index}`}
+                            index={index}
+                          >
+                            {(provided, snapshot) => (
+                              <div
+                                ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                                className={`dragbox_box ${
+                                  snapshot.isDragging && `dragbox_active`
+                                }`}
+                              >
+                                <div className="dragbox_title">
+                                  <h4
+                                    style={
+                                      todo.content
+                                        ? { marginBottom: "8px" }
+                                        : {}
+                                    }
+                                  >
+                                    {todo.ch_title}
+                                    {snapshot.isDraggingOver}
+                                  </h4>
+                                  <h5>{todo.eg_title}</h5>
+                                </div>
                               </div>
-                            </div>
-                          )}
-                        </Draggable>
-                        {provided.placeholder}
-                      </li>
-                    )}
-                  </Droppable>
-                ))}
-              </ul>
+                            )}
+                          </Draggable>
+                          {provided.placeholder}
+                        </li>
+                      )}
+                    </Droppable>
+                  ))}
+                </ul>
+              )}
             </div>
             <Droppable droppableId="undone">
               {(provided) => (

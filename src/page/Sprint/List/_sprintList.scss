@@ -14,7 +14,7 @@
     }
 
     .dragbox_box {
-      @include size(258px, 86.59px);
+      @include size(100%, 100%);
     }
   }
 
@@ -131,52 +131,35 @@
       }
     }
 
-    .dragbox_item {
-      @include size(258px, 86.59px);
-      @include done_dash_border;
-      .dragbox_box{
+    .done_list {
+      @include size(calc(100% - 360px), 100%);
+      position: relative;
+
+      ul {
+        @include size(115.7%, 100%);
         position: absolute;
+        right: 0;
+      }
+
+      li {
+        position: absolute;
+
+        &:nth-child(1) {
+          top: -4px;
+          left: 20px;
+          @include size(258px, 86.59px);
+          @include done_dash_border;
+        }
+
+        &:nth-child(2) {
+          @include sprint_list_done_left_box(96px, $have_next: true);
+        }
+
+        &:last-child {
+          @include sprint_list_done_left_box(410px, $have_next: false);
+        }
       }
     }
-    .dragbox_box_0{
-      top: -6px;
-      left: 283px;
-    }
-    .dragbox_item_1{}
-    .dragbox_item_2{}
-
-    // .done_list {
-    //   @include size(calc(100% - 360px), 100%);
-    //   position: relative;
-
-    //   ul {
-    //     // @include size(115.7%, 100%);
-    //     @include size(150%, 100%);
-    //     // position: absolute;
-    //     position: relative;
-    //     right: 0;
-    //   }
-
-    //   li {
-    //     position: absolute;
-
-    //     &:nth-child(1) {
-    //       top: -4px;
-    //       // left: 20px;
-    //       left: 230px;
-    //       @include size(258px, 86.59px);
-    //       @include done_dash_border;
-    //     }
-
-    //     &:nth-child(2) {
-    //       // @include sprint_list_done_left_box(96px, $have_next: true);
-    //     }
-
-    //     &:last-child {
-    //       // @include sprint_list_done_left_box(410px, $have_next: false);
-    //     }
-    //   }
-    // }
   }
 
   &_right_mobile {
