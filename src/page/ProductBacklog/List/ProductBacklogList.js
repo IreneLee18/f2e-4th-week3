@@ -8,6 +8,7 @@ import {
   product_backlog_correct_done,
 } from "../../../utils/ProductBacklogData";
 import { randomArray } from "../../../utils/RadomArray";
+import useModal from "../../../hooks/UseModal";
 import { DragDropContext } from "react-beautiful-dnd";
 import { useState, useRef, useEffect } from "react";
 
@@ -16,36 +17,13 @@ function ProductBacklogList() {
     randomArray(product_backlog_undone, product_backlog_undone.length)
   );
   const [done, setDone] = useState(product_backlog_done);
-  const [doneID, setDoneID] = useState("");
   const [footerCss, setFooterCss] = useState({});
-  // modal
-  const [modalText, setModalText] = useState([]);
-  const [modalBtnText, setModalBtnText] = useState("");
   const modalRef = useRef();
-  const handleClickFinish = () => {
-    modalRef.current.openModal();
-
-    if (doneID.includes("null")) {
-      // 沒填完
-      setModalText(["咦～你好像還沒完成唷！"]);
-      setModalBtnText("返回挑戰");
-      return;
-    }
-
-    if (doneID === product_backlog_correct_done) {
-      // 填完正確
-      setModalText([
-        "你做得非常好！",
-        "你已經能掌握基礎產品代辦清單的優先度排序",
-        "接下來再繼續挑戰吧！",
-      ]);
-      setModalBtnText("前往下個挑戰");
-    } else {
-      // 填完錯誤
-      setModalText(["順序可以再調整看看唷！"]);
-      setModalBtnText("再試試看");
-    }
-  };
+  const { modalText, modalBtnText, handleClickFinish } = useModal(
+    modalRef,
+    done,
+    product_backlog_correct_done
+  );
 
   // 結束拖曳
   const onDragEnd = (e) => {
@@ -101,17 +79,17 @@ function ProductBacklogList() {
         isUndone[sourceIndex] = {};
         isDone[destinationIndex] = selected;
 
-      // 如果放的位置在 done && done 有資料，就互換
+        // 如果放的位置在 done && done 有資料，就互換
       } else if (
         destination.droppableId.includes("done") &&
         isDone[destinationIndex]?.id
-        ) {
+      ) {
         isUndone[sourceIndex] = isDone[destinationIndex];
         isDone[destinationIndex] = selected;
       }
       console.log(isDone[destinationIndex]?.id, isUndone[sourceIndex]?.id);
 
-    // 起始：done
+      // 起始：done
     } else {
       selected = isDone[sourceIndex];
       // 如果有資料就互換
@@ -135,10 +113,6 @@ function ProductBacklogList() {
       setFooterCss({});
     }
   });
-  useEffect(() => {
-    let doneId = done.map((item) => (item.id ? item.id : "null")).join("_");
-    setDoneID(doneId);
-  }, [done]);
 
   return (
     <>

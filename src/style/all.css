@@ -448,7 +448,7 @@ footer div {
 }
 
 .description_rd .description_description_item {
-  background: #6b6500;
+  background: #FFF2054D;
 }
 
 .description_character {
@@ -1580,9 +1580,16 @@ footer div {
   }
 }
 
-.product_backlog_list_body .dragbox_undone_active .dragbox_box {
-  background: #FF52A5;
-  border-color: #fff;
+.product_backlog_list_body .dragbox_undone_active {
+  border: 8px solid #fff !important;
+  background: #FF52A5 !important;
+  -webkit-box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
+          box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
+}
+
+.product_backlog_list_body .dragbox_undone_active h4,
+.product_backlog_list_body .dragbox_undone_active h5 {
+  color: #fff !important;
 }
 
 .product_backlog_list_body .dragbox_undone .dragbox_item:nth-child(1) .dragbox_undone_item {
@@ -1613,7 +1620,7 @@ footer div {
 }
 
 .product_backlog_list_body .dragbox_done li {
-  border: 8px dashed #999999;
+  border: 8px dashed #464B55;
 }
 
 .product_backlog_list_body .dragbox_done_active {
@@ -1703,13 +1710,18 @@ footer div {
   height: 116px;
 }
 
-.sprint_backlog_list .dragbox_active .dragbox_box {
-  border-color: #fff;
-  background: #FFF205;
+.sprint_backlog_list .dragbox_active {
+  border: 8px solid #fff !important;
+  background: #FFF205 !important;
+  -webkit-box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
+          box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
 }
 
 .sprint_backlog_list .dragbox_active h4,
-.sprint_backlog_list .dragbox_active h5,
+.sprint_backlog_list .dragbox_active h5 {
+  color: #454545 !important;
+}
+
 .sprint_backlog_list .dragbox_active .point {
   color: #454545 !important;
 }
@@ -1924,7 +1936,197 @@ footer div {
   }
 }
 
+.sprint_list_body {
+  padding: 8px 0;
+}
+
 .sprint_list_done {
   background: #2F343F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px 0;
+  position: relative;
+}
+
+.sprint_list_done .dragbox_box {
+  width: 100%;
+  height: 100%;
+}
+
+.sprint_list_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 60px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sprint_list_left li {
+  position: relative;
+}
+
+.sprint_list_left li:first-child, .sprint_list_left li:nth-child(2) {
+  margin-bottom: 64px;
+}
+
+.sprint_list_left li:first-child::after, .sprint_list_left li:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 48px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/down.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sprint_list_left li:last-child::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: -48px;
+  width: 48px;
+  height: 40px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sprint_list_left div {
+  background: #FFF205;
+  color: #181E2A;
+  padding: 8px 16px;
+}
+
+.sprint_list_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  width: 75%;
+  position: relative;
+}
+
+.sprint_list_right .done_list_start {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/circle_arrow.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 360px;
+  height: 200px;
+  position: relative;
+}
+
+.sprint_list_right .done_list_start::before {
+  content: '';
+  position: absolute;
+  top: -96px;
+  left: 264px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/circle.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 298px;
+  height: 128px;
+}
+
+.sprint_list_right .done_list {
+  width: calc(100% - 360px);
+  height: 100%;
+  position: relative;
+}
+
+.sprint_list_right .done_list ul {
+  width: 115.7%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.sprint_list_right .done_list li {
+  position: absolute;
+}
+
+.sprint_list_right .done_list li:nth-child(1) {
+  top: -4px;
+  left: 20px;
+  width: 258px;
+  height: 86.59px;
+  border: 8px dashed #464B55;
+}
+
+.sprint_list_right .done_list li:nth-child(2) {
+  width: 258px;
+  height: 86.59px;
+  border: 8px dashed #464B55;
+  bottom: 25px;
+  left: 96px;
+}
+
+.sprint_list_right .done_list li:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  left: 258px;
+  top: 15px;
+  width: 48px;
+  height: 40px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sprint_list_right .done_list li:last-child {
+  width: 258px;
+  height: 86.59px;
+  border: 8px dashed #464B55;
+  bottom: 25px;
+  left: 410px;
+}
+
+.sprint_list_undone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+}
+
+.sprint_list_undone .dragbox_item {
+  margin-right: 16px;
+}
+
+.sprint_list .dragbox_title {
+  text-align: center;
+}
+
+.sprint_list .dragbox_done_active {
+  border-color: #fff !important;
+}
+
+.sprint_list .dragbox__have_item {
+  border: 8px solid #FFF205 !important;
+}
+
+.sprint_list .dragbox_active {
+  border: 8px solid #fff !important;
+  background: #FFF205 !important;
+  -webkit-box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
+          box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
+}
+
+.sprint_list .dragbox_active h4,
+.sprint_list .dragbox_active h5 {
+  color: #454545 !important;
 }
 /*# sourceMappingURL=all.css.map */

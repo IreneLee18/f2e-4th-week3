@@ -123,7 +123,7 @@ function SprintBacklogList() {
                         todo={item}
                         i={index}
                         type="undone"
-                        active={snapshot.isDraggingOver}
+                        // active={snapshot.isDraggingOver}
                       />
                     ))}
                     {provided.placeholder}

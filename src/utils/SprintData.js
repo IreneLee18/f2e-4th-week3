@@ -46,3 +46,8 @@ export const retrospective_content = [
   "團隊在自省會議裡，會共同回顧該短衝歷程發生的事情、好的地方、可以改進的地方。",
   "如何維持我們已有的成功經驗，優化工作流程、讓團隊有變得更好的機會。",
 ];
+
+export const sprint_list_left = ["產品待辦清單", "短衝規劃", "短衝待辦清單"];
+export const sprint_list_undone = [...navbar];
+export const sprint_list_done = [{}, {}, {}];
+export const sprint_list_correct_ID = "daily_review_retrospective";

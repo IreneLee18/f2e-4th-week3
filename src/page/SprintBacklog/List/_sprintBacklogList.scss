@@ -82,13 +82,8 @@
     }
 
     &_active {
-      .dragbox_box {
-        border-color: #fff;
-        background: $yellow;
-      }
+      @include drag(#fff, $yellow, $gray700);
 
-      h4,
-      h5,
       .point {
         color: $gray700  !important;
       }
@@ -119,22 +114,26 @@
 
   .title_undone {
     padding: 16px 16px 24px;
+
     @media (max-width:414px) {
       padding: 16px 16px 0;
     }
   }
+
   .title_done {
     @include flex(end, space-between);
     padding: 16px;
+
     @media (max-width:414px) {
       flex-direction: column;
     }
-  
+
     h4 {
       color: $yellow;
       font-size: 12px;
     }
   }
+
   .progress_bar {
     display: flex;
 

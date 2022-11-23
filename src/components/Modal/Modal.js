@@ -17,8 +17,15 @@ function Modal({ character, text, btn_text }, ref) {
       }
     }
 
-    if (pathname.includes("sprint_backlog_list")) {
-      setModalState(false);
+    if (pathname.includes("sprint_backlog_list")) setModalState(false);
+
+    if (pathname.includes("sprint_list")) {
+      if (btn_text === "返回挑戰" || btn_text === "再試試看") {
+        setModalState(false);
+      } else {
+        setModalState(false);
+        navigate("/retro");
+      }
     }
   };
 

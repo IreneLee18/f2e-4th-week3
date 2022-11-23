@@ -1,5 +1,133 @@
-.sprint_list{
-  &_done{
+.sprint_list {
+  &_body {
+    padding: 8px 0;
+  }
+
+  &_done {
     background: $background10;
+    display: flex;
+    padding: 24px 0;
+    position: relative;
+
+    .dragbox_box {
+      @include size(100%, 100%);
+    }
+  }
+
+  &_left {
+    @include flex(center, center);
+    padding: 0 60px;
+    flex-direction: column;
+
+    li {
+      position: relative;
+
+      &:first-child,
+      &:nth-child(2) {
+        margin-bottom: 64px;
+
+        &::after {
+          content: '';
+          @include position-centerX(absolute);
+          @include size(40px, 48px);
+          @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/down.png?raw=true', cover);
+        }
+      }
+
+      &:last-child {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 5px;
+          right: -48px;
+          @include size(48px, 40px);
+          @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true', cover);
+        }
+      }
+    }
+
+    div {
+      background: $yellow;
+      color: $background;
+      padding: 8px 16px;
+    }
+  }
+
+  &_right {
+    display: flex;
+    align-items: end;
+    width: 75%;
+    position: relative;
+
+    .done_list_start {
+      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/circle_arrow.png?raw=true', cover);
+      @include size(360px, 200px);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -96px;
+        left: 264px;
+        @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/circle.png?raw=true', cover);
+        @include size(298px, 128px);
+      }
+    }
+
+    .done_list {
+      @include size(calc(100% - 360px), 100%);
+      position: relative;
+
+      ul {
+        @include size(115.7%, 100%);
+        position: absolute;
+        right: 0;
+      }
+
+      li {
+        position: absolute;
+
+        &:nth-child(1) {
+          top: -4px;
+          left: 20px;
+          @include size(258px, 86.59px);
+          @include done_dash_border;
+        }
+
+        &:nth-child(2) {
+          @include sprint_list_done_left_box(96px, $have_next: true);
+        }
+
+        &:last-child {
+          @include sprint_list_done_left_box(410px, $have_next: false);
+        }
+      }
+    }
+  }
+
+  &_undone {
+    display: flex;
+    padding-top: 16px;
+
+    .dragbox_item {
+      margin-right: 16px;
+    }
+
+  }
+
+  .dragbox_title {
+    text-align: center;
+  }
+
+  .dragbox_done_active {
+    border-color: #fff !important;
+  }
+
+  .dragbox__have_item {
+    border: 8px solid $yellow  !important;
+  }
+
+  .dragbox_active {
+    @include drag(#fff, $yellow, $gray700);
   }
 }

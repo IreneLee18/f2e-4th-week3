@@ -143,10 +143,7 @@
 
       //li
       &_active {
-        .dragbox_box {
-          background: $pink;
-          border-color: #fff;
-        }
+        @include drag(#fff,$pink,#fff);
       }
 
       // &_item
@@ -194,7 +191,7 @@
 
     &_done {
       li {
-        border: 8px dashed $gray500;
+        @include done_dash_border;
       }
 
       // li

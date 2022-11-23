@@ -4,6 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 @mixin position-centerX($position) {
   position: $position;
   left: 50%;
@@ -53,4 +54,39 @@
 @mixin flex-justify-content-space-between {
   display: flex;
   justify-content: space-between;
+}
+
+@mixin done_dash_border {
+  border: 8px dashed $background20;
+}
+
+@mixin drag($bd, $bg, $tc) {
+  border: 8px solid $bd !important;
+  background: $bg !important;
+  box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
+
+  h4,
+  h5 {
+    color: $tc !important;
+  }
+
+
+}
+
+@mixin sprint_list_done_left_box($l, $have_next) {
+  @include size(258px, 86.59px);
+  @include done_dash_border;
+  bottom: 25px;
+  left: $l;
+
+  @if($have_next) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 258px;
+      top: 15px;
+      @include size(48px, 40px);
+      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true', cover);
+    }
+  }
 }
