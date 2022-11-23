@@ -6,7 +6,7 @@ import {
   product_backlog_undone,
   product_backlog_done,
   product_backlog_correct_done,
-} from "../../../utils/ProductBacklogData";
+} from "../../../utils/data/ProductBacklogData";
 import { randomArray } from "../../../utils/RadomArray";
 import useModal from "../../../hooks/UseModal";
 import { DragDropContext } from "react-beautiful-dnd";

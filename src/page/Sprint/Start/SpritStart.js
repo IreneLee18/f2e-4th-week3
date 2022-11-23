@@ -6,7 +6,7 @@ import {
   daily_content,
   review_content,
   retrospective_content,
-} from "../../../utils/SprintData";
+} from "../../../utils/data/SprintData";
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 

@@ -11,7 +11,7 @@ import {
   progress_bar_16,
   progress_bar_18,
   sprint_backlog_undone,
-} from "../../../utils/SprintBacklogData";
+} from "../../../utils/data/SprintBacklogData";
 import { randomArray } from "../../../utils/RadomArray";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { useState, useRef } from "react";

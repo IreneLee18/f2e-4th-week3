@@ -8,11 +8,11 @@ import {
   sprint_list_left,
   sprint_list_undone,
   sprint_list_done,
-} from "../../../utils/SprintData";
+} from "../../../utils/data/SprintData";
 import { randomArray } from "../../../utils/RadomArray";
 import useModal from "../../../hooks/UseModal";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { nanoid } from "nanoid";
 function SprintList() {
   const [undone, setUndone] = useState(

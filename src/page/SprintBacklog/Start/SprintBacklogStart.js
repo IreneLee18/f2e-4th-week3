@@ -1,6 +1,6 @@
 import Description from "../../../components/Description/Description";
 import BacklogFooter from "../../../components/Backlog/BacklogFooter";
-import { direction, footerCss } from "../../../utils/SprintBacklogData";
+import { direction, footerCss } from "../../../utils/data/SprintBacklogData";
 
 function SprintBacklogStart() {
   return (

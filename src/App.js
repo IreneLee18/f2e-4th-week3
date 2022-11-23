@@ -8,6 +8,7 @@ import SprintBacklogStart from "./page/SprintBacklog/Start/SprintBacklogStart";
 import SprintBacklogList from "./page/SprintBacklog/List/SprintBacklogList";
 import SpritStart from "./page/Sprint/Start/SpritStart";
 import SprintList from "./page/Sprint/List/SprintList";
+import Retro from "./page/Retro/Retro";
 import { useState, useEffect } from "react";
 import Stars from "./components/Stars";
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="sprint_backlog_list" element={<SprintBacklogList />} />
           <Route path="sprint" element={<SpritStart />} />
           <Route path="sprint_list" element={<SprintList />} />
+          <Route path="retro" element={<Retro />} />
         </Route>
       </Routes>
       {!isLoading && (
