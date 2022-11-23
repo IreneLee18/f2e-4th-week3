@@ -2142,24 +2142,47 @@ footer div {
           justify-content: space-between;
 }
 
+@media (max-width: 820px) {
+  .retro_body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .retro_item {
   width: 49%;
   background: #2F343F;
 }
 
+@media (max-width: 820px) {
+  .retro_item {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .retro_item:last-child {
+    margin-bottom: 48px;
+  }
+}
+
 .retro_title {
   color: #FFF205;
-  padding-bottom: 24px;
+  padding: 24px 0;
   background: #181E2A;
   text-align: center;
 }
 
+@media (max-width: 414px) {
+  .retro_title {
+    font-size: 30px;
+  }
+}
+
 .retro_content {
-  padding: 24px;
+  padding: 20px;
 }
 
 .retro_content li {
-  height: 152px;
+  min-height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2169,5 +2192,67 @@ footer div {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  .retro_content li {
+    padding: 10px 0;
+  }
+}
+
+.retro_content li:hover .arrow::after {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.retro_content li:hover .content {
+  color: #FFF205;
+}
+
+.retro_content li .arrow {
+  position: relative;
+  width: 10%;
+}
+
+@media (max-width: 414px) {
+  .retro_content li .arrow {
+    width: 20%;
+  }
+}
+
+.retro_content li .arrow:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/dark_right.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.retro_content li .content {
+  width: 90%;
+}
+
+@media (max-width: 414px) {
+  .retro_content li .content {
+    width: 80%;
+    font-size: 24px;
+  }
+}
+
+.retro_content .retro_active .arrow::after {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.retro_content .retro_active .content {
+  color: #FFF205;
 }
 /*# sourceMappingURL=all.css.map */

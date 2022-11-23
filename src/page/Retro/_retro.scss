@@ -1,23 +1,77 @@
 .retro {
   &_body {
-    @include flex(start,space-between);
+    @include flex(start, space-between);
+
+    @media (max-width:820px) {
+      flex-wrap: wrap;
+    }
   }
 
   &_item {
     width: 49%;
     background: $background10;
+
+    @media (max-width:820px) {
+      width: 100%;
+      margin-bottom: 12px;
+      &:last-child{
+        margin-bottom: 48px;
+      }
+    }
   }
-  &_title{
+
+  &_title {
     color: $yellow;
-    padding-bottom: 24px;
+    padding: 24px 0;
     background: $background;
     text-align: center;
-  }
-  &_content{
-    padding: 24px;
-    li{
-      height: 152px;
-      @include flex(center,start);
+    @media (max-width:414px) {
+      font-size: 30px;
     }
+  }
+
+  &_content {
+    padding: 20px;
+
+    li {
+      min-height: 100px;
+      @include flex(center, start);
+      cursor: pointer;
+      @media (max-width:414px) {
+        padding: 10px 0;
+      }
+
+      &:hover {
+        @include retro_active;
+      }
+
+      .arrow {
+        position: relative;
+        width: 10%;
+        @media (max-width:414px) {
+          width: 20%;
+        }
+
+        &:after {
+          content: '';
+          @include position-centerY(absolute);
+          @include size(40px, 40px);
+          @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/dark_right.png?raw=true', cover);
+        }
+      }
+
+      .content {
+        width: 90%;
+        @media (max-width:414px) {
+          width: 80%;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .retro_active {
+      @include retro_active;
+    }
+
   }
 }

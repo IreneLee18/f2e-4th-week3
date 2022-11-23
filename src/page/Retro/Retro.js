@@ -11,13 +11,24 @@ import useModal from "../../hooks/UseModal";
 import { useState, useRef } from "react";
 
 function Retro() {
-  const [done, setDone] = useState([]);
+  const [done, setDone] = useState([{}, {}]);
   const modalRef = useRef();
-  const { modalText, modalBtnText, handleClickFinish } = useModal(
+  const { modalText, modalBtnText, doneID, handleClickFinish } = useModal(
     modalRef,
     done,
     retro_correct_ID
   );
+  const handleClickRetro = (e) => {
+    const { id } = e.target;
+    const final = [...done];
+    console.log(id);
+    if (id === "help" || id === "cover") {
+      final[0] = { id: id };
+    } else {
+      final[1] = { id: id };
+    }
+    setDone(final);
+  };
   return (
     <>
       <div className="container view90_center_mb48 retro">
@@ -28,9 +39,16 @@ function Retro() {
               <h2 className="retro_title">{retro.title}</h2>
               <ul className="retro_content">
                 {retro.retro.map((item) => (
-                  <li key={item.id}>
-                    <span></span>
-                    <h3>{item.content}</h3>
+                  <li
+                    className={doneID.includes(item.id) ? "retro_active" : ""}
+                    key={item.id}
+                    id={item.id}
+                    onClick={handleClickRetro}
+                  >
+                    <div className="arrow" id={item.id}></div>
+                    <h3 className="content" id={item.id}>
+                      {item.content}
+                    </h3>
                   </li>
                 ))}
               </ul>

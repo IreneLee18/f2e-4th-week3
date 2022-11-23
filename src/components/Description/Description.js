@@ -2,7 +2,10 @@ import { nanoid } from "nanoid";
 function Description({ character }) {
   return (
     <>
-      <div key={character.id} className={`description description_${character.id}`}>
+      <div
+        key={character.id}
+        className={`description description_${character.id}`}
+      >
         <div className="description_character">
           <div
             className={`description_character_image ${character.id}_image`}
@@ -12,7 +15,9 @@ function Description({ character }) {
         <div className="description_description">
           {character.contents.map((content) => (
             <div key={nanoid()} className="description_description_item">
-              <h4>{content}</h4>
+              {content.map((item) => (
+                <h4 key={nanoid()}>{item}</h4>
+              ))}
             </div>
           ))}
         </div>

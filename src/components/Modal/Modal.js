@@ -27,6 +27,15 @@ function Modal({ character, text, btn_text }, ref) {
         navigate("/retro");
       }
     }
+
+    if (pathname.includes("retro")) {
+      if (btn_text === "返回挑戰" || btn_text === "再試試看") {
+        setModalState(false);
+      } else {
+        setModalState(false);
+        navigate("/finish");
+      }
+    }
   };
 
   return (

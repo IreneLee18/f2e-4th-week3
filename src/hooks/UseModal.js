@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-function useModal(modalRef,done,correctDoneID) {
+function useModal(modalRef, done, correctDoneID) {
   const { pathname } = useLocation();
   const [doneID, setDoneID] = useState("");
 
@@ -32,6 +32,14 @@ function useModal(modalRef,done,correctDoneID) {
           "你已經了解短衝的流程，",
           "接下來再繼續挑戰吧！",
         ]);
+
+      if (pathname.includes("retro")) {
+        setModalText([
+          "你做得非常好！",
+          "你已經了解如何給予『正面表述』的回饋！",
+        ]);
+        setModalBtnText("完成挑戰");
+      }
     } else {
       // 填完錯誤
       setModalBtnText("再試試看");
@@ -40,15 +48,21 @@ function useModal(modalRef,done,correctDoneID) {
 
       if (pathname.includes("sprint_list"))
         setModalText(["差一點！", "再思考一下流程，你可以的！"]);
+        
+      if (pathname.includes("retro"))
+        setModalText([
+          "差一點！",
+          "請你再思考看看，哪一些是符合『正面表述』的回饋？",
+        ]);
     }
   };
   useEffect(() => {
     let doneId =
-      done && done.map((item) => (item.id ? item.id : "null")).join("_");
+      done && done.map((item) => (item?.id ? item?.id : "null")).join("_");
     setDoneID(doneId);
   }, [done]);
 
-  return { modalText, modalBtnText, handleClickFinish };
+  return { modalText, modalBtnText, doneID, handleClickFinish };
 }
 
 export default useModal;

@@ -10,6 +10,11 @@
   left: 50%;
   transform: translateX(-50%);
 }
+@mixin position-centerY($position) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @mixin image($url, $size) {
   background-image: url($url);
@@ -88,5 +93,17 @@
       @include size(48px, 40px);
       @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true', cover);
     }
+  }
+}
+
+@mixin retro_active {
+  .arrow {
+    &::after {
+      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true', 100%);
+    }
+  }
+
+  .content {
+    color: $yellow;
   }
 }
