@@ -2124,8 +2124,8 @@ footer div {
 }
 
 .sprint_list_done .dragbox_box {
-  width: 100%;
-  height: 100%;
+  width: 258px;
+  height: 86.59px;
 }
 
 .sprint_list_left {
@@ -2311,57 +2311,19 @@ footer div {
   height: 128px;
 }
 
-.sprint_list_right .done_list {
-  width: calc(100% - 360px);
-  height: 100%;
-  position: relative;
-}
-
-.sprint_list_right .done_list ul {
-  width: 115.7%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-}
-
-.sprint_list_right .done_list li {
-  position: absolute;
-}
-
-.sprint_list_right .done_list li:nth-child(1) {
-  top: -4px;
-  left: 20px;
+.sprint_list_right .dragbox_item {
   width: 258px;
   height: 86.59px;
   border: 8px dashed #464B55;
 }
 
-.sprint_list_right .done_list li:nth-child(2) {
-  width: 258px;
-  height: 86.59px;
-  border: 8px dashed #464B55;
-  bottom: 25px;
-  left: 96px;
-}
-
-.sprint_list_right .done_list li:nth-child(2)::after {
-  content: '';
+.sprint_list_right .dragbox_item .dragbox_box {
   position: absolute;
-  left: 258px;
-  top: 15px;
-  width: 48px;
-  height: 40px;
-  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.sprint_list_right .done_list li:last-child {
-  width: 258px;
-  height: 86.59px;
-  border: 8px dashed #464B55;
-  bottom: 25px;
-  left: 410px;
+.sprint_list_right .dragbox_box_0 {
+  top: -6px;
+  left: 283px;
 }
 
 .sprint_list_right_mobile {

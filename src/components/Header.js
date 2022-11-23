@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import undone from "../style/image/progress/progress_bar_undone.png";
 import done from "../style/image/progress/progress_bar_done.png";
@@ -16,7 +16,6 @@ const initProgressBar = [
 ];
 function Header() {
   const { pathname } = useLocation();
-  console.log(pathname);
   const [progressBar, setProgress] = useState(initProgressBar);
   useEffect(() => {
     switch (pathname) {

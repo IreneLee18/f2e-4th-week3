@@ -10,7 +10,7 @@ import {
 import { randomArray } from "../../../utils/RadomArray";
 import useModal from "../../../hooks/UseModal";
 import { DragDropContext } from "react-beautiful-dnd";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 function ProductBacklogList() {
   const [undone, setUndone] = useState(
@@ -87,7 +87,6 @@ function ProductBacklogList() {
         isUndone[sourceIndex] = isDone[destinationIndex];
         isDone[destinationIndex] = selected;
       }
-      console.log(isDone[destinationIndex]?.id, isUndone[sourceIndex]?.id);
 
       // 起始：done
     } else {
@@ -99,7 +98,6 @@ function ProductBacklogList() {
         isDone[sourceIndex] = {};
       }
       isDone[destinationIndex] = selected;
-      console.log(selected);
     }
 
     setDone(isDone);
