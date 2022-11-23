@@ -10,19 +10,26 @@ import SpritStart from "./page/Sprint/Start/SpritStart";
 import SprintList from "./page/Sprint/List/SprintList";
 import Retro from "./page/Retro/Retro";
 import Finish from "./page/Finish/Finish";
+import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Stars from "./components/Stars";
 
 function App() {
+  const { pathname } = useLocation();
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
+    if (pathname === "/") {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, [3000]);
+    } else {
       setIsLoading(false);
-    }, [3000]);
-  }, []);
+    }
+  }, [pathname]);
   return (
     <>
-      <Stars/>
+      <Stars />
       {!isLoading && <Header />}
       <Routes>
         <Route path="/">

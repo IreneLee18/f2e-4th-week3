@@ -101,7 +101,7 @@ function SprintBacklogList() {
   };
   return (
     <>
-      <div className="container sprint_backlog_list">
+      <div className="container view90_center_mb48 sprint_backlog_list">
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="sprint_backlog_list_body">
             {/* undone */}

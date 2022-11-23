@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 const tableArr3 = [...Array(3).keys()];
-
 function Finish() {
   return (
     <div className="container finish">
@@ -8,7 +8,9 @@ function Finish() {
           <li className="table" key={item}></li>
         ))}
       </ul>
-      <div className="finish_congrats"></div>
+      <Link to="/">
+        <div className="finish_congrats"></div>
+      </Link>
       <div className="finish_title">
         <div className="type h1_type">
           <h1>恭喜通過 Scrum 新手村！</h1>

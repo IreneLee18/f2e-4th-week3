@@ -1,14 +1,17 @@
 .roles_title {
   @include flex-center;
   padding: 28px 0;
+
   @media (max-width:414px) {
     padding: 24px 0;
   }
 }
-.roles_body{
+
+.roles_body {
   width: 80vw;
   margin: 0 auto;
 }
+
 .characters {
   @include flex-justify-content-space-between;
 
@@ -26,6 +29,9 @@
     text-align: center;
     margin-bottom: 32px;
   }
+  @media (max-width:414px) {
+    width: 100%;
+  }
 
   &_image {
     @include size(100%, 284px);
@@ -35,6 +41,7 @@
       margin: 0 auto;
       @include size(300px, 404px);
     }
+
     @media (max-width:414px) {
       margin: 0 auto;
       @include size(100px, 144px);
@@ -62,15 +69,35 @@
   h3 {
     padding: 32px 0 16px;
   }
+
+  .content {
+    @media (max-width:414px) {
+      text-align: left;
+    }
+  }
 }
-.roles_footer{
+
+.roles_footer {
   width: 80vw;
   margin: 0 auto;
-  @include flex(center,space-between);
+  @include flex(center, space-between);
   padding: 24px 0;
-  &_switch_page_btn{
-    button{
-      &:first-child{
+
+  @media (max-width:414px) {
+    align-items: end;
+    flex-direction: column;
+  }
+
+  &_switch_page_btn {
+    @media (max-width:414px) {
+      @include flex(center, space-between);
+      align-self: center;
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    button {
+      &:first-child {
         margin-right: 32px;
         padding: 24px;
       }

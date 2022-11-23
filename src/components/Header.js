@@ -1,4 +1,4 @@
-import { useState, useRef,useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import undone from "../style/image/progress/progress_bar_undone.png";
 import done from "../style/image/progress/progress_bar_done.png";
@@ -18,20 +18,122 @@ function Header() {
   const { pathname } = useLocation();
   console.log(pathname);
   const [progressBar, setProgress] = useState(initProgressBar);
-  const newProgress = useRef([...progressBar])
   useEffect(() => {
     switch (pathname) {
       case "/":
         setProgress(initProgressBar);
         break;
       case "/roles":
-        newProgress.current.splice(0, 0, doing);
-        setProgress(newProgress.current);
+        setProgress([
+          doing,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/product_backlog":
+        setProgress([
+          done,
+          doing,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/product_backlog_list":
+        setProgress([
+          done,
+          done,
+          doing,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/sprint_backlog":
+        setProgress([
+          done,
+          done,
+          done,
+          doing,
+          undone,
+          undone,
+          undone,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/sprint_backlog_list":
+        setProgress([
+          done,
+          done,
+          done,
+          done,
+          doing,
+          undone,
+          undone,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/sprint":
+        setProgress([
+          done,
+          done,
+          done,
+          done,
+          done,
+          doing,
+          undone,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/sprint_list":
+        setProgress([
+          done,
+          done,
+          done,
+          done,
+          done,
+          done,
+          doing,
+          undone,
+          undone,
+        ]);
+        break;
+      case "/retro":
+        setProgress([
+          done,
+          done,
+          done,
+          done,
+          done,
+          done,
+          done,
+          doing,
+          undone,
+        ]);
+        break;
+      case "/finish":
+        setProgress([done, done, done, done, done, done, done, done, done]);
         break;
       default:
         new Error("error");
     }
-  }, [newProgress, pathname]);
+  }, [pathname]);
 
   return (
     <header>

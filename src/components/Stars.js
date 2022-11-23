@@ -6,8 +6,8 @@ function Stars() {
   const starList = [];
   for (let i = 0; i < 100; i++) {
     const style = {};
-    style.left = `${Math.random() * 90}vw`;
-    style.top = `${Math.random() * 90}vh`;
+    style.left = `${Math.random() * 100}vw`;
+    style.top = `${Math.random() * 100}vh`;
     style.transform = `scale(${Math.random() * 1.2})`;
     style.animationDelay = `${Math.random()}s`;
     starList.push(style);

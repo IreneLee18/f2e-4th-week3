@@ -38,14 +38,11 @@ footer {
   width: 90vw;
   margin: 0 auto;
   padding-bottom: 48px;
+  @media (max-width:820px) {
+    padding-bottom: 24px;
+  }
 }
 
-// .stars{
-//   width: 100%;
-//   height: calc(100vh - 48px);
-//   position: absolute;
-//   overflow: hidden;
-// }
 .star {
   position: absolute;
   @include size(0px, 0px);
