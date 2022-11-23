@@ -10,6 +10,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 @mixin position-centerY($position) {
   position: $position;
   top: 50%;
@@ -66,13 +67,13 @@
 }
 
 @mixin drag($bd, $bg, $tc) {
-  border: 8px solid $bd !important;
-  background: $bg !important;
+  border: 8px solid $bd  !important;
+  background: $bg  !important;
   box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.32);
 
   h4,
   h5 {
-    color: $tc !important;
+    color: $tc  !important;
   }
 
 
@@ -120,7 +121,18 @@
   .rd_image {
     @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true', cover);
   }
+
   .tica_image {
     @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/Tica.png?raw=true', cover);
   }
+}
+
+@mixin arrow_down() {
+  @include size(40px, 48px);
+  @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/down.png?raw=true', cover);
+}
+
+@mixin arrow_right {
+  @include size(48px, 40px);
+  @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/sprint/right.png?raw=true', cover);
 }
