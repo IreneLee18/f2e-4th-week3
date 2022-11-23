@@ -2129,4 +2129,45 @@ footer div {
 .sprint_list .dragbox_active h5 {
   color: #454545 !important;
 }
+
+.retro_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.retro_item {
+  width: 49%;
+  background: #2F343F;
+}
+
+.retro_title {
+  color: #FFF205;
+  padding-bottom: 24px;
+  background: #181E2A;
+  text-align: center;
+}
+
+.retro_content {
+  padding: 24px;
+}
+
+.retro_content li {
+  height: 152px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
 /*# sourceMappingURL=all.css.map */

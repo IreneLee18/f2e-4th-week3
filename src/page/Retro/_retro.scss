@@ -1,0 +1,23 @@
+.retro {
+  &_body {
+    @include flex(start,space-between);
+  }
+
+  &_item {
+    width: 49%;
+    background: $background10;
+  }
+  &_title{
+    color: $yellow;
+    padding-bottom: 24px;
+    background: $background;
+    text-align: center;
+  }
+  &_content{
+    padding: 24px;
+    li{
+      height: 152px;
+      @include flex(center,start);
+    }
+  }
+}
