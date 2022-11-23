@@ -9,6 +9,7 @@ import SprintBacklogList from "./page/SprintBacklog/List/SprintBacklogList";
 import SpritStart from "./page/Sprint/Start/SpritStart";
 import SprintList from "./page/Sprint/List/SprintList";
 import Retro from "./page/Retro/Retro";
+import Finish from "./page/Finish/Finish";
 import { useState, useEffect } from "react";
 import Stars from "./components/Stars";
 
@@ -21,7 +22,7 @@ function App() {
   }, []);
   return (
     <>
-      {/* <Stars/> */}
+      <Stars/>
       {!isLoading && <Header />}
       <Routes>
         <Route path="/">
@@ -34,6 +35,7 @@ function App() {
           <Route path="sprint" element={<SpritStart />} />
           <Route path="sprint_list" element={<SprintList />} />
           <Route path="retro" element={<Retro />} />
+          <Route path="finish" element={<Finish />} />
         </Route>
       </Routes>
       {!isLoading && (

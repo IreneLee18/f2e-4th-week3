@@ -203,6 +203,160 @@ button {
   font-size: 18px;
 }
 
+@-webkit-keyframes rocket {
+  0% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes rocket {
+  0% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes twinkle {
+  0%,
+  100% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes congrats {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes congrats {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 80px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes finish_character_bottom_0 {
+  0%,
+  100% {
+    bottom: 0;
+    opacity: .7;
+  }
+  50% {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes finish_character_bottom_0 {
+  0%,
+  100% {
+    bottom: 0;
+    opacity: .7;
+  }
+  50% {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes finish_character_bottom_50 {
+  0%,
+  100% {
+    bottom: 50px;
+    opacity: .7;
+  }
+  50% {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes finish_character_bottom_50 {
+  0%,
+  100% {
+    bottom: 50px;
+    opacity: .7;
+  }
+  50% {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #fff;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #fff;
+  }
+}
+
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,52 +448,6 @@ footer div {
           transform: rotate(-72deg);
   -webkit-transform-origin: 50% 22.5%;
           transform-origin: 50% 22.5%;
-}
-
-@-webkit-keyframes rocket {
-  0% {
-    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  100% {
-    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-@keyframes rocket {
-  0% {
-    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  100% {
-    background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-@-webkit-keyframes twinkle {
-  0%,
-  100% {
-    opacity: .5;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: .5;
-  }
-  50% {
-    opacity: 0;
-  }
 }
 
 .loading_page {
@@ -486,6 +594,12 @@ footer div {
 
 .description_character .rd_image {
   background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.description_character .tica_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/Tica.png?raw=true");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1377,6 +1491,10 @@ footer div {
   padding-bottom: 0;
 }
 
+.product_backlog_list {
+  padding-top: 24px;
+}
+
 @media (max-width: 820px) {
   .product_backlog_list {
     margin-bottom: 24px;
@@ -1625,6 +1743,10 @@ footer div {
 
 .product_backlog_list_body .dragbox_done_active {
   border-color: #fff !important;
+}
+
+.sprint_backlog_list {
+  padding-top: 24px;
 }
 
 @media (max-width: 414px) {
@@ -2254,5 +2376,198 @@ footer div {
 
 .retro_content .retro_active .content {
   color: #FFF205;
+}
+
+.finish {
+  position: relative;
+}
+
+.finish_congrats {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/Congrats.png?raw=true");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: congrats 1s 1s forwards;
+          animation: congrats 1s 1s forwards;
+  opacity: 0;
+  width: 904px;
+  height: 108px;
+}
+
+@media (max-width: 820px) {
+  .finish_congrats {
+    width: 600px;
+    height: 108px;
+  }
+}
+
+@media (max-width: 414px) {
+  .finish_congrats {
+    width: 300px;
+    height: 108px;
+  }
+}
+
+.finish_title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 230px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media (max-width: 414px) {
+  .finish_title {
+    top: 150px;
+  }
+  .finish_title h1 {
+    font-size: 30px;
+  }
+  .finish_title h2 {
+    font-size: 24px;
+  }
+}
+
+.finish_title .type {
+  overflow: hidden;
+  opacity: 0;
+}
+
+.finish_title .h1_type {
+  -webkit-animation: type steps(11) 3s 2s forwards;
+          animation: type steps(11) 3s 2s forwards;
+  margin-bottom: 20px;
+}
+
+.finish_title .h2_type {
+  -webkit-animation: type steps(14) 3s 5s forwards;
+          animation: type steps(14) 3s 5s forwards;
+}
+
+.finish_character .po_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.finish_character .sm_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.finish_character .rd_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.finish_character .tica_image {
+  background-image: url("https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/Tica.png?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.finish_character li {
+  position: absolute;
+  width: 176px;
+  height: 240px;
+  opacity: 0;
+}
+
+@media (max-width: 414px) {
+  .finish_character li {
+    width: 88px;
+    height: 120px;
+  }
+}
+
+.finish_character .tica_image,
+.finish_character .sm_image {
+  bottom: 50px;
+  -webkit-animation: finish_character_bottom_50 1s 2.5s infinite;
+          animation: finish_character_bottom_50 1s 2.5s infinite;
+}
+
+.finish_character .po_image,
+.finish_character .rd_image {
+  bottom: 0;
+  -webkit-animation: finish_character_bottom_0 1s 2s infinite;
+          animation: finish_character_bottom_0 1s 2s infinite;
+}
+
+.finish_character .sm_image,
+.finish_character .rd_image {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.finish_character .po_image {
+  left: 150px;
+}
+
+@media (max-width: 820px) {
+  .finish_character .po_image {
+    left: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .finish_character .po_image {
+    left: 0;
+  }
+}
+
+.finish_character .tica_image {
+  left: 400px;
+}
+
+@media (max-width: 820px) {
+  .finish_character .tica_image {
+    left: 200px;
+  }
+}
+
+@media (max-width: 414px) {
+  .finish_character .tica_image {
+    left: 80px;
+  }
+}
+
+.finish_character .sm_image {
+  right: 400px;
+}
+
+@media (max-width: 820px) {
+  .finish_character .sm_image {
+    right: 200px;
+  }
+}
+
+@media (max-width: 414px) {
+  .finish_character .sm_image {
+    right: 80px;
+  }
+}
+
+.finish_character .rd_image {
+  right: 150px;
+}
+
+@media (max-width: 820px) {
+  .finish_character .rd_image {
+    right: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .finish_character .rd_image {
+    right: 0;
+  }
 }
 /*# sourceMappingURL=all.css.map */

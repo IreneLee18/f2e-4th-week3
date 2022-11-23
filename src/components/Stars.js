@@ -2,14 +2,12 @@ import { nanoid } from "nanoid";
 import { useState, useRef, useEffect } from "react";
 function Stars() {
   const [stars, setStars] = useState([]);
-  const bodyWidth = window.innerWidth;
-  const bodyHeight = window.innerHeight;
   const star = useRef();
   const starList = [];
   for (let i = 0; i < 100; i++) {
     const style = {};
-    style.left = `${Math.random() * bodyWidth}px`;
-    style.top = `${Math.random() * bodyHeight}px`;
+    style.left = `${Math.random() * 90}vw`;
+    style.top = `${Math.random() * 90}vh`;
     style.transform = `scale(${Math.random() * 1.2})`;
     style.animationDelay = `${Math.random()}s`;
     starList.push(style);

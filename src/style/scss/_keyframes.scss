@@ -1,0 +1,83 @@
+@keyframes rocket {
+  0% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true', cover);
+  }
+
+  100% {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true', cover);
+  }
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes congrats {
+
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes finish_character_bottom_0 {
+
+  0%,
+  100% {
+    bottom: 0;
+    opacity: .7;
+  }
+
+  50% {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes finish_character_bottom_50 {
+
+  0%,
+  100% {
+    bottom: 50px;
+    opacity: .7;
+  }
+
+  50% {
+    bottom: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: #fff;
+  }
+}

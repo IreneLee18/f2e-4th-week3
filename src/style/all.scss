@@ -1,6 +1,7 @@
 @import './scss/variable';
 @import './scss/mixin';
 @import './scss/reset';
+@import './scss/keyframes';
 @import './scss/index';
 @import '../components/Loading/loading';
 @import '../components/Modal/modal';
@@ -15,3 +16,4 @@
 @import '../page/Sprint/Start/sprintStart';
 @import '../page/Sprint/List/sprintList';
 @import '../page/Retro/retro';
+@import '../page/Finish/finish';

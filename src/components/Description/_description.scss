@@ -37,17 +37,7 @@
       @include size(180px, 152px);
     }
 
-    .po_image {
-      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true', cover);
-    }
-
-    .sm_image {
-      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true', cover);
-    }
-
-    .rd_image {
-      @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true', cover);
-    }
+    @include character;
   }
 
   &_description {
@@ -59,7 +49,8 @@
 
       @media (max-width:414px) {
         padding: 16px;
-        h4{
+
+        h4 {
           font-size: 18px;
         }
       }

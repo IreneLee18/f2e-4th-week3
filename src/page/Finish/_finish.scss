@@ -1,0 +1,133 @@
+.finish {
+  position: relative;
+
+  &_congrats {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/Congrats.png?raw=true', 100%);
+    @include position-centerX(absolute);
+    animation: congrats 1s 1s forwards;
+    opacity: 0;
+    @include size(904px, 108px);
+
+    @media (max-width:820px) {
+      @include size(600px, 108px);
+    }
+
+    @media (max-width:414px) {
+      @include size(300px, 108px);
+    }
+  }
+
+  &_title {
+    @include position-centerX(absolute);
+    top: 230px;
+    white-space: nowrap;
+    text-align: center;
+
+    @media (max-width:414px) {
+      top: 150px;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    .type {
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .h1_type {
+      animation: type steps(11) 3s 2s forwards;
+      margin-bottom: 20px;
+    }
+
+    .h2_type {
+      animation: type steps(14) 3s 5s forwards;
+    }
+
+  }
+
+  &_character {
+    @include character;
+
+    li {
+      position: absolute;
+      @include size(176px, 240px);
+      opacity: 0;
+
+      @media (max-width:414px) {
+        @include size(88px, 120px);
+      }
+    }
+
+    .tica_image,
+    .sm_image {
+      bottom: 50px;
+      animation: finish_character_bottom_50 1s 2.5s infinite;
+    }
+
+    .po_image,
+    .rd_image {
+      bottom: 0;
+      animation: finish_character_bottom_0 1s 2s infinite;
+    }
+
+
+    .sm_image,
+    .rd_image {
+      transform: scale(-1, 1);
+    }
+
+    .po_image {
+      left: 150px;
+
+      @media (max-width:820px) {
+        left: 20px;
+      }
+
+      @media (max-width:414px) {
+        left: 0;
+      }
+    }
+
+    .tica_image {
+      left: 400px;
+
+      @media (max-width:820px) {
+        left: 200px;
+      }
+
+      @media (max-width:414px) {
+        left: 80px;
+      }
+    }
+
+    .sm_image {
+      right: 400px;
+
+      @media (max-width:820px) {
+        right: 200px;
+      }
+
+      @media (max-width:414px) {
+        right: 80px;
+      }
+    }
+
+    .rd_image {
+      right: 150px;
+
+      @media (max-width:820px) {
+        right: 20px;
+      }
+
+      @media (max-width:414px) {
+        right: 0;
+      }
+    }
+  }
+}

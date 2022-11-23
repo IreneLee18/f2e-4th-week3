@@ -107,3 +107,20 @@
     color: $yellow;
   }
 }
+
+@mixin character {
+  .po_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/PO.png?raw=true', cover);
+  }
+
+  .sm_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/SM.png?raw=true', cover);
+  }
+
+  .rd_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/RD.png?raw=true', cover);
+  }
+  .tica_image {
+    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/character/Tica.png?raw=true', cover);
+  }
+}

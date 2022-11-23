@@ -60,25 +60,3 @@ footer {
 .star::after {
   @include star_pseudo(-72deg);
 }
-
-@keyframes rocket {
-  0% {
-    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket0.png?raw=true', cover);
-  }
-
-  100% {
-    @include image('https://github.com/IreneLee18/f2e-4th-week3/blob/master/src/style/image/rocket/Rocket1.png?raw=true', cover);
-  }
-}
-
-@keyframes twinkle {
-
-  0%,
-  100% {
-    opacity: .5;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
