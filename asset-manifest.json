@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/f2e-4th-week3/static/css/main.3432056c.css",
+    "main.js": "/f2e-4th-week3/static/js/main.8d4d3d9b.js",
+    "index.html": "/f2e-4th-week3/index.html",
+    "main.3432056c.css.map": "/f2e-4th-week3/static/css/main.3432056c.css.map",
+    "main.8d4d3d9b.js.map": "/f2e-4th-week3/static/js/main.8d4d3d9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3432056c.css",
+    "static/js/main.8d4d3d9b.js"
+  ]
+}
