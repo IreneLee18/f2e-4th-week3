@@ -16,7 +16,7 @@ function Stars() {
   useEffect(() => {
     setStars(star.current);
   }, []);
-  
+
   return (
     <ul className="stars">
       {stars.map((item) => (

@@ -84,17 +84,48 @@
   }
 
   &_body {
-    background: darken($primary,30%);
+    background: darken($primary, 30%);
     border: 16px solid rgba(255, 255, 255, 0.5);
+    min-height: 190px;
   }
 
   &_txt {
-    padding: 10px 0;
-    @include flex-center;
-    flex-direction: column;
+    @media (min-width:821px) {
+      @include position-centerX(absolute);
+    }
+    @media (max-width:820px) {
+      padding: 0 10px;
+    }
 
-    span {
+    .type {
+      @media (min-width:821) {
+        overflow: hidden;
+        opacity: 0;
+
+        &:nth-child(1) {
+          animation: type steps(27) 3s infinite;
+        }
+
+        &:nth-child(2) {
+          animation: type steps(30) 3s 2s forwards;
+        }
+
+        &:nth-child(3) {
+          animation: type steps(24) 3s 5s forwards;
+        }
+      }
+    }
+
+    h4 {
       padding: 10px 0;
+      white-space: nowrap;
+
+      @media (max-width:820px) {
+        white-space: normal;
+      }
+      @media (max-width:414px) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -115,7 +146,7 @@
   z-index: -1;
 
   li {
-    background: darken($primary,30%);
+    background: darken($primary, 30%);
     width: 100%;
 
     &:nth-child(1) {

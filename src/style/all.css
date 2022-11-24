@@ -249,6 +249,88 @@ button {
   }
 }
 
+@-webkit-keyframes firework_scatter {
+  0% {
+    offset-distance: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes firework_scatter {
+  0% {
+    offset-distance: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes firework_position {
+  0%,
+  19.9% {
+    -webkit-transform: translate(10vw, 40vh);
+            transform: translate(10vw, 40vh);
+  }
+  20%,
+  39.9% {
+    -webkit-transform: translate(40vw, 30vh);
+            transform: translate(40vw, 30vh);
+  }
+  40%,
+  59.9% {
+    -webkit-transform: translate(20vw, 90vh);
+            transform: translate(20vw, 90vh);
+  }
+  60%,
+  79.9% {
+    -webkit-transform: translate(30vw, 20vh);
+            transform: translate(30vw, 20vh);
+  }
+  80%,
+  99.9% {
+    -webkit-transform: translate(80vw, 50vh);
+            transform: translate(80vw, 50vh);
+  }
+}
+
+@keyframes firework_position {
+  0%,
+  19.9% {
+    -webkit-transform: translate(10vw, 40vh);
+            transform: translate(10vw, 40vh);
+  }
+  20%,
+  39.9% {
+    -webkit-transform: translate(40vw, 30vh);
+            transform: translate(40vw, 30vh);
+  }
+  40%,
+  59.9% {
+    -webkit-transform: translate(20vw, 90vh);
+            transform: translate(20vw, 90vh);
+  }
+  60%,
+  79.9% {
+    -webkit-transform: translate(30vw, 20vh);
+            transform: translate(30vw, 20vh);
+  }
+  80%,
+  99.9% {
+    -webkit-transform: translate(80vw, 50vh);
+            transform: translate(80vw, 50vh);
+  }
+}
+
 @-webkit-keyframes congrats {
   0% {
     top: -200px;
@@ -454,6 +536,382 @@ footer div {
           transform: rotate(-72deg);
   -webkit-transform-origin: 50% 22.5%;
           transform-origin: 50% 22.5%;
+}
+
+.firework_group {
+  position: absolute;
+  top: 0;
+  height: 10px;
+  width: 10px;
+  -webkit-animation: firework_position 5s ease-out infinite;
+          animation: firework_position 5s ease-out infinite;
+}
+
+.firework {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  offset-distance: 0;
+  z-index: -1;
+}
+
+.firework:nth-of-type(0) {
+  offset-path: path("M 0 0 , Q 0 -47, 293 -111 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(1) {
+  offset-path: path("M 0 0 , Q 0 -44, 249 -261 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(2) {
+  offset-path: path("M 0 0 , Q 0 -3, 117 136 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(3) {
+  offset-path: path("M 0 0 , Q 0 -18, -248 48 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(4) {
+  offset-path: path("M 0 0 , Q 0 -47, -111 -181 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(5) {
+  offset-path: path("M 0 0 , Q 0 -46, -126 18 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(6) {
+  offset-path: path("M 0 0 , Q 0 -26, -170 -83 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(7) {
+  offset-path: path("M 0 0 , Q 0 -20, 75 -282 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(8) {
+  offset-path: path("M 0 0 , Q 0 -33, 206 -217 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(9) {
+  offset-path: path("M 0 0 , Q 0 -46, -209 102 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(10) {
+  offset-path: path("M 0 0 , Q 0 -3, 199 38 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(11) {
+  offset-path: path("M 0 0 , Q 0 -43, 222 -235 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(12) {
+  offset-path: path("M 0 0 , Q 0 -5, -111 156 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(13) {
+  offset-path: path("M 0 0 , Q 0 -3, -223 99 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(14) {
+  offset-path: path("M 0 0 , Q 0 -42, -223 286 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(15) {
+  offset-path: path("M 0 0 , Q 0 -8, -218 -51 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(16) {
+  offset-path: path("M 0 0 , Q 0 -48, -74 -9 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(17) {
+  offset-path: path("M 0 0 , Q 0 -37, 27 28 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(18) {
+  offset-path: path("M 0 0 , Q 0 -18, 219 184 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(19) {
+  offset-path: path("M 0 0 , Q 0 -36, -180 39 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(20) {
+  offset-path: path("M 0 0 , Q 0 -39, -96 300 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(21) {
+  offset-path: path("M 0 0 , Q 0 -44, -246 34 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(22) {
+  offset-path: path("M 0 0 , Q 0 -31, 61 167 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(23) {
+  offset-path: path("M 0 0 , Q 0 -37, 9 -72 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(24) {
+  offset-path: path("M 0 0 , Q 0 -31, 116 261 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(25) {
+  offset-path: path("M 0 0 , Q 0 -45, 4 31 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(26) {
+  offset-path: path("M 0 0 , Q 0 -23, -13 102 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(27) {
+  offset-path: path("M 0 0 , Q 0 -35, 204 -16 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(28) {
+  offset-path: path("M 0 0 , Q 0 -12, 157 274 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(29) {
+  offset-path: path("M 0 0 , Q 0 -43, -83 -264 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(30) {
+  offset-path: path("M 0 0 , Q 0 -33, -41 198 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(31) {
+  offset-path: path("M 0 0 , Q 0 -2, 99 -271 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(32) {
+  offset-path: path("M 0 0 , Q 0 -37, -54 165 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(33) {
+  offset-path: path("M 0 0 , Q 0 -40, -57 -281 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(34) {
+  offset-path: path("M 0 0 , Q 0 -21, -60 254 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(35) {
+  offset-path: path("M 0 0 , Q 0 -24, -83 -84 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(36) {
+  offset-path: path("M 0 0 , Q 0 -8, 185 133 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(37) {
+  offset-path: path("M 0 0 , Q 0 -28, -161 -220 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(38) {
+  offset-path: path("M 0 0 , Q 0 -9, 104 -94 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(39) {
+  offset-path: path("M 0 0 , Q 0 -9, 182 -40 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(40) {
+  offset-path: path("M 0 0 , Q 0 -45, -219 -205 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(41) {
+  offset-path: path("M 0 0 , Q 0 -26, -164 49 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(42) {
+  offset-path: path("M 0 0 , Q 0 -32, 81 -26 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #fff76b;
+}
+
+.firework:nth-of-type(43) {
+  offset-path: path("M 0 0 , Q 0 -47, 151 77 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
+}
+
+.firework:nth-of-type(44) {
+  offset-path: path("M 0 0 , Q 0 -39, 170 -207 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(45) {
+  offset-path: path("M 0 0 , Q 0 -14, -56 -71 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(46) {
+  offset-path: path("M 0 0 , Q 0 -27, 280 96 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #55befa;
+}
+
+.firework:nth-of-type(47) {
+  offset-path: path("M 0 0 , Q 0 -41, -236 -216 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(48) {
+  offset-path: path("M 0 0 , Q 0 -24, 247 -171 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(49) {
+  offset-path: path("M 0 0 , Q 0 -31, -68 226 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #ffb8da;
+}
+
+.firework:nth-of-type(50) {
+  offset-path: path("M 0 0 , Q 0 -47, 277 -296 ");
+  -webkit-animation: firework_scatter 1s ease-out infinite;
+          animation: firework_scatter 1s ease-out infinite;
+  background: #b1ff67;
 }
 
 .loading_page {
@@ -785,27 +1243,58 @@ footer div {
 .welcome_content_body {
   background: #02324e;
   border: 16px solid rgba(255, 255, 255, 0.5);
+  min-height: 190px;
 }
 
-.welcome_content_txt {
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (min-width: 821px) {
+  .welcome_content_txt {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
-.welcome_content_txt span {
+@media (max-width: 820px) {
+  .welcome_content_txt {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 821) {
+  .welcome_content_txt .type {
+    overflow: hidden;
+    opacity: 0;
+  }
+  .welcome_content_txt .type:nth-child(1) {
+    -webkit-animation: type steps(27) 3s infinite;
+            animation: type steps(27) 3s infinite;
+  }
+  .welcome_content_txt .type:nth-child(2) {
+    -webkit-animation: type steps(30) 3s 2s forwards;
+            animation: type steps(30) 3s 2s forwards;
+  }
+  .welcome_content_txt .type:nth-child(3) {
+    -webkit-animation: type steps(24) 3s 5s forwards;
+            animation: type steps(24) 3s 5s forwards;
+  }
+}
+
+.welcome_content_txt h4 {
   padding: 10px 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .welcome_content_txt h4 {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 414px) {
+  .welcome_content_txt h4 {
+    font-size: 20px;
+  }
 }
 
 .welcome_content_btn {
@@ -1526,8 +2015,20 @@ footer div {
   }
 }
 
-.product_backlog_body .text h4 {
-  padding-bottom: 8px;
+.product_backlog_body .text .type {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 415px) {
+  .product_backlog_body .text .type:nth-child(1) {
+    opacity: 0;
+    overflow: hidden;
+    -webkit-animation: type steps(27) 3s infinite;
+            animation: type steps(27) 3s infinite;
+  }
+  .product_backlog_body .text .type:nth-child(1) h4 {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 414px) {

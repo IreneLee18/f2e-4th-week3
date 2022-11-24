@@ -1,0 +1,44 @@
+@function radom_number($min, $max) {
+  @return $min +floor(random() * (($max - $min) + 1));
+  ;
+}
+
+$firework_colors: $primary, $pink, $green, $yellow;
+$total_firework_number: 50;
+
+@mixin firework_create_path {
+  // 指定元素要遵循的路徑：path( SVG 路徑 )
+  // M 0 0：「 起始位置 (0,0) 」，M 代表起始位置
+  // Q：轉彎轉的委婉點？(爬文爬不太到不太理解，是用練習模擬猜測出來的，因為沒寫 Q 影響不大，差別在於感覺轉彎比較順暢？？)
+  // 0 radom_number(0, -50)：「 從 (0,0) 到 (0,radom_number(0, -50)) 」
+  // radom_number(-300, 300) radom_number(-300, 300)：「 從 (0,radom_number(0, -50)) 到 (radom_number(-300, 300),radom_number(-300, 300)) 」
+  offset-path: path("M 0 0 , Q 0 #{radom_number(0, -50)}, #{radom_number(-300, 300)} #{radom_number(-300, 300)} "
+  );
+}
+
+.firework_group {
+  position: absolute;
+  top: 0;
+  height: 10px;
+  width: 10px;
+  animation: firework_position 5s ease-out infinite;
+}
+
+.firework {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // 指定offset-path要放置元素的位置。
+  offset-distance: 0;
+  z-index: -1;
+
+  @for $i from 0 through $total_firework_number {
+    &:nth-of-type(#{$i}) {
+      @include firework_create_path;
+      animation: firework_scatter 1s ease-out infinite;
+      background: lighten(nth($firework_colors, random(length($firework_colors))), 20%);
+    }
+  }
+}

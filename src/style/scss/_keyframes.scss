@@ -20,6 +20,49 @@
   }
 }
 
+@keyframes firework_scatter {
+  0% {
+    offset-distance: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes firework_position {
+
+  0%,
+  19.9% {
+    transform: translate(10vw, 40vh);
+  }
+
+  20%,
+  39.9% {
+    transform: translate(40vw, 30vh);
+  }
+
+  40%,
+  59.9% {
+    transform: translate(20vw, 90vh);
+  }
+
+  60%,
+  79.9% {
+    transform: translate(30vw, 20vh);
+  }
+
+  80%,
+  99.9% {
+    transform: translate(80vw, 50vh);
+  }
+}
+
 @keyframes congrats {
 
   0% {
