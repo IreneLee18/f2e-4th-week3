@@ -10,6 +10,7 @@ import SpritStart from "./page/Sprint/Start/SpritStart";
 import SprintList from "./page/Sprint/List/SprintList";
 import Retro from "./page/Retro/Retro";
 import Finish from "./page/Finish/Finish";
+import NotFound from "./page/NotFound/NotFound";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Stars from "./components/Stars";
@@ -43,6 +44,7 @@ function App() {
           <Route path="sprint_list" element={<SprintList />} />
           <Route path="retro" element={<Retro />} />
           <Route path="finish" element={<Finish />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       {!isLoading && (
