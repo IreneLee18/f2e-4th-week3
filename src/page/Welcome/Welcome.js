@@ -18,15 +18,15 @@ function Welcome({ isLoading }) {
             <div className="welcome_content_icon"></div>
             <div className="welcome_content_body">
               <div className="welcome_content_txt">
-                <div className="type">
+                <div className="welcome_content_type">
                   <h4>哈囉，歡迎加入 TT 資訊！</h4>
                 </div>
-                <div className="type">
+                <div className="welcome_content_type">
                   <h4>
                     在正式加入專案開發之前，需要請你先了解 Scrum 的流程與精神！
                   </h4>
                 </div>
-                <div className="type">
+                <div className="welcome_content_type">
                   <h4>請接受挑戰任務，成功通過 Scrum 新手村的挑戰任務吧～</h4>
                 </div>
               </div>
