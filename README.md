@@ -5,6 +5,7 @@
 - React
 - React Beautiful DND 
 - SCSS
+- GSAP
 
 ## 資料夾說明
 - components
