@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/f2e-4th-week3/static/css/main.86dfb2ec.css",
-    "main.js": "/f2e-4th-week3/static/js/main.6b6f1b46.js",
+    "main.css": "/f2e-4th-week3/static/css/main.c56e8916.css",
+    "main.js": "/f2e-4th-week3/static/js/main.62a2cab2.js",
     "index.html": "/f2e-4th-week3/index.html",
-    "main.86dfb2ec.css.map": "/f2e-4th-week3/static/css/main.86dfb2ec.css.map",
-    "main.6b6f1b46.js.map": "/f2e-4th-week3/static/js/main.6b6f1b46.js.map"
+    "main.c56e8916.css.map": "/f2e-4th-week3/static/css/main.c56e8916.css.map",
+    "main.62a2cab2.js.map": "/f2e-4th-week3/static/js/main.62a2cab2.js.map"
   },
   "entrypoints": [
-    "static/css/main.86dfb2ec.css",
-    "static/js/main.6b6f1b46.js"
+    "static/css/main.c56e8916.css",
+    "static/js/main.62a2cab2.js"
   ]
 }
