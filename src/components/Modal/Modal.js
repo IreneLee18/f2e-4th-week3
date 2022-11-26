@@ -8,6 +8,11 @@ function Modal({ character, text, btn_text }, ref) {
     openModal: () => setModalState(true),
   }));
   const handleCloseModal = () => {
+    if (btn_text === "確認") {
+      setModalState(false);
+      return;
+    }
+
     if (pathname.includes("product_backlog_list")) {
       if (btn_text === "返回挑戰" || btn_text === "再試試看") {
         setModalState(false);

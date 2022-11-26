@@ -27,6 +27,7 @@ function App() {
     } else {
       setIsLoading(false);
     }
+    window.scrollTo(0,0)
   }, [pathname]);
   return (
     <>

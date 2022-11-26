@@ -8,6 +8,7 @@ import {
   sprint_list_left,
   sprint_list_undone,
   sprint_list_done,
+  sprint_list_correct_done,
 } from "../../../utils/data/SprintData";
 import { randomArray } from "../../../utils/RadomArray";
 import useModal from "../../../hooks/UseModal";
@@ -21,7 +22,7 @@ function SprintList() {
   const [done, setDone] = useState(sprint_list_done);
   // modal
   const modalRef = useRef();
-  const { modalText, modalBtnText, handleClickFinish } = useModal(
+  const { modalText, modalBtnText, handleClickFinish, counter } = useModal(
     modalRef,
     done,
     sprint_list_correct_ID
@@ -117,6 +118,12 @@ function SprintList() {
       setIsMobile(false);
     }
   });
+  useEffect(() => {
+    if (counter === 3) {
+      setDone(sprint_list_correct_done);
+      setUndone([])
+    }
+  },[counter]);
 
   return (
     <>

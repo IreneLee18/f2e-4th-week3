@@ -6,18 +6,16 @@ import {
   retro_description,
   retros,
   retro_correct_ID,
+  retro_correct,
 } from "../../utils/data/RetroData";
 import useModal from "../../hooks/UseModal";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function Retro() {
   const [done, setDone] = useState([{}, {}]);
   const modalRef = useRef();
-  const { modalText, modalBtnText, doneID, handleClickFinish } = useModal(
-    modalRef,
-    done,
-    retro_correct_ID
-  );
+  const { modalText, modalBtnText, doneID, handleClickFinish, counter } =
+    useModal(modalRef, done, retro_correct_ID);
   const handleClickRetro = (e) => {
     const { id } = e.target;
     const final = [...done];
@@ -29,6 +27,11 @@ function Retro() {
     }
     setDone(final);
   };
+  useEffect(() => {
+    if (counter === 3) {
+      setDone(retro_correct);
+    }
+  },[counter]);
   return (
     <>
       <div className="container view90_center_mb48 retro">

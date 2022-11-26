@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 function useModal(modalRef, done, correctDoneID) {
   const { pathname } = useLocation();
   const [doneID, setDoneID] = useState("");
+  const [counter, setCounter] = useState(0);
 
   // modal
   const [modalText, setModalText] = useState([]);
   const [modalBtnText, setModalBtnText] = useState("");
   const handleClickFinish = () => {
     modalRef.current.openModal();
+    setCounter((state) => state + 1);
     if (doneID.includes("null")) {
       // 沒填完
       setModalBtnText("返回挑戰");
@@ -48,7 +50,7 @@ function useModal(modalRef, done, correctDoneID) {
 
       if (pathname.includes("sprint_list"))
         setModalText(["差一點！", "再思考一下流程，你可以的！"]);
-        
+
       if (pathname.includes("retro"))
         setModalText([
           "差一點！",
@@ -60,9 +62,14 @@ function useModal(modalRef, done, correctDoneID) {
     let doneId =
       done && done.map((item) => (item?.id ? item?.id : "null")).join("_");
     setDoneID(doneId);
-  }, [done]);
+    if (counter === 3 && doneID !== correctDoneID) {
+      setModalText(["失敗3次了～", "幫你調整正確順序囉＾＾"]);
+      setModalBtnText("確認");
+      setCounter(0);
+    }
+  }, [correctDoneID, counter, done, doneID]);
 
-  return { modalText, modalBtnText, doneID, handleClickFinish };
+  return { modalText, modalBtnText, doneID, handleClickFinish, counter };
 }
 
 export default useModal;

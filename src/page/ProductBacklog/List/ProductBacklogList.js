@@ -5,12 +5,16 @@ import Modal from "../../../components/Modal/Modal";
 import {
   product_backlog_undone,
   product_backlog_done,
+  product_backlog_correct_done_ID,
   product_backlog_correct_done,
 } from "../../../utils/data/ProductBacklogData";
 import { randomArray } from "../../../utils/RadomArray";
 import useModal from "../../../hooks/UseModal";
 import { DragDropContext } from "react-beautiful-dnd";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import GSAP from "../../../utils/GSAP";
+const text =
+  "請試著把需求放到產品待辦清單，並調整待辦的優先度順序。<br/>我們公司也推薦使用 Jira 來做任務的管理呢！";
 
 function ProductBacklogList() {
   const [undone, setUndone] = useState(
@@ -19,10 +23,10 @@ function ProductBacklogList() {
   const [done, setDone] = useState(product_backlog_done);
   const [footerCss, setFooterCss] = useState({});
   const modalRef = useRef();
-  const { modalText, modalBtnText, handleClickFinish } = useModal(
+  const { modalText, modalBtnText, handleClickFinish, counter } = useModal(
     modalRef,
     done,
-    product_backlog_correct_done
+    product_backlog_correct_done_ID
   );
 
   // 結束拖曳
@@ -112,6 +116,18 @@ function ProductBacklogList() {
     }
   });
 
+  const content_txt = useRef();
+  useEffect(() => {
+    if (content_txt.current) {
+      GSAP(".content_txt", text);
+    }
+  });
+  useEffect(() => {
+    if (counter === 3) {
+      setDone(product_backlog_correct_done);
+      setUndone(product_backlog_done);
+    }
+  }, [counter]);
   return (
     <>
       <div className="container view90_center_mb48 product_backlog_list">
@@ -119,8 +135,7 @@ function ProductBacklogList() {
           <div className="character"></div>
           <div className="text">
             <div>
-              <h4>請試著把需求放到產品待辦清單，並調整待辦的優先度順序。</h4>
-              <h4>我們公司也推薦使用 Jira 來做任務的管理呢！</h4>
+              <h4 className="content_txt" ref={content_txt}></h4>
             </div>
             <div className="jira_logo"></div>
           </div>

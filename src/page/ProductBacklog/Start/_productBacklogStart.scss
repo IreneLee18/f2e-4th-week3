@@ -122,23 +122,6 @@
       border-width: 8px;
     }
 
-    .type {
-      margin-bottom: 16px;
-
-      @media (min-width:415px) {
-        &:nth-child(1) {
-          opacity: 0;
-          overflow: hidden;
-          animation: type steps(27) 3s infinite;
-
-          h4 {
-            white-space: nowrap;
-
-          }
-        }
-      }
-    }
-
     h4 {
       @media (max-width:414px) {
         font-size: 18px;

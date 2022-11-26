@@ -13,7 +13,7 @@ export const retro_description = {
 export const retros = [
   {
     title: "做得好的地方",
-    id:'left',
+    id: "left",
     retro: [
       {
         id: "help",
@@ -27,7 +27,7 @@ export const retros = [
   },
   {
     title: "有哪些可以做得更好？",
-    id:'right',
+    id: "right",
     retro: [
       {
         id: "record",
@@ -42,3 +42,4 @@ export const retros = [
 ];
 
 export const retro_correct_ID = "cover_record";
+export const retro_correct = [{ id: "cover" }, { id: "record" }];

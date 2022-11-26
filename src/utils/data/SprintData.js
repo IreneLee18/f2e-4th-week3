@@ -51,3 +51,4 @@ export const sprint_list_left = ["產品待辦清單", "短衝規劃", "短衝�
 export const sprint_list_undone = [...navbar];
 export const sprint_list_done = [{}, {}, {}];
 export const sprint_list_correct_ID = "daily_review_retrospective";
+export const sprint_list_correct_done = [...navbar];
